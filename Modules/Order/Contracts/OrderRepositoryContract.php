@@ -1,7 +1,6 @@
 <?php
 namespace Plenty\Modules\Order\Contracts;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Plenty\Exceptions\ValidationException;
 use Plenty\Modules\Order\Models\Order;
@@ -21,7 +20,8 @@ interface OrderRepositoryContract
 	 */
 	public function findOrderById(
 		int $orderId, 
-		array $with = []
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -29,7 +29,8 @@ interface OrderRepositoryContract
 	 */
 	public function findOrderByExternalOrderId(
 		string $externalOrderId, 
-		array $with = []
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -121,7 +122,8 @@ interface OrderRepositoryContract
 	public function searchOrders(
 		int $page = 1, 
 		int $itemsPerPage = 50, 
-		array $with = []
+		array $with = [], 
+		bool $lazyLoaded = false
 	):PaginatedResult;
 
 	/**
@@ -170,7 +172,7 @@ interface OrderRepositoryContract
 	):Order;
 
 	/**
-	 * Deprecated : Set order status to 4 or 5
+	 * Set order status to 4 or 5
 	 */
 	public function setOrderStatus45(
 		int $orderId

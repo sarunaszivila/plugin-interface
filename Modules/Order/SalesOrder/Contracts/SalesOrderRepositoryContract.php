@@ -86,4 +86,20 @@ interface SalesOrderRepositoryContract
 		array $data
 	):Order;
 
+	/**
+	 * Book order.
+	 */
+	public function book(
+		int $orderId, 
+		array $data = []
+	):bool;
+
+	/**
+	 * Cancellation the booking of an order. The ID of the order must be specified.
+	 */
+	public function cancelBooking(
+		int $orderId, 
+		array $data = []
+	):bool;
+
 }
