@@ -30,6 +30,10 @@ abstract class VariationDataInterfaceContext
 		TypeInterface $filter
 	):VariationDataInterfaceContext;
 
+	abstract public function setFilter(
+		Collection $filter
+	):self;
+
 	/**
 	 * Add aggregation to aggregate the result.
 	 */

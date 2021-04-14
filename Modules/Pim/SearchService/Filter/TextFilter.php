@@ -3,7 +3,9 @@ namespace Plenty\Modules\Pim\SearchService\Filter;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Data\Update\Handler\Traits\MultilingualTrait;
+use Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Statement\Filter\TermFilter;
+use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Statement\Filter\WildcardStringFilter;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Statement\StatementInterface;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Type\Filter\BoolMustFilter;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Type\TypeInterface;
@@ -35,6 +37,30 @@ abstract class TextFilter implements TypeInterface
 	abstract public function hasNameInLanguage(
 		string $lang = "de", 
 		string $filter = self::FILTER_ANY_NAME
+	):self;
+
+	abstract public function matchAnyName(
+		string $lang, 
+		string $term, 
+		string $precision = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_EXACT
+	):self;
+
+	abstract public function matchName1(
+		string $lang, 
+		string $term, 
+		string $precision = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_EXACT
+	):self;
+
+	abstract public function matchName2(
+		string $lang, 
+		string $term, 
+		string $precision = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_EXACT
+	):self;
+
+	abstract public function matchName3(
+		string $lang, 
+		string $term, 
+		string $precision = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_EXACT
 	):self;
 
 	abstract public function toArray(
