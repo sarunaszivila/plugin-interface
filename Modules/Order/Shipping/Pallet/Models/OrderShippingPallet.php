@@ -32,6 +32,8 @@ public		$barcode;
 	
 public		$isClosed;
 	
+public		$palletSscc;
+	
 	/**
 	 * Returns this model as an array.
 	 */
