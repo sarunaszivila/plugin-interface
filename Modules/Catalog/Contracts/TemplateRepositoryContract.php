@@ -1,6 +1,8 @@
 <?php
 namespace Plenty\Modules\Catalog\Contracts;
 
+use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
+use Plenty\Modules\Catalog\Models\TemplateGroup;
 
 /**
  * The TemplateRepositoryContract is the interface for the template repository. It allows to retrieve templates and their mappings.

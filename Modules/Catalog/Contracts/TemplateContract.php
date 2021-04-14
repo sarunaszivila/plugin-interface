@@ -2,6 +2,7 @@
 namespace Plenty\Modules\Catalog\Contracts;
 
 use Illuminate\Contracts\Support\Arrayable;
+use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
 
 /**
  * The TemplateContract is the interface for templates. Templates are used to define a specific schema that can be used to create and configure a catalogue.
@@ -40,6 +41,20 @@ interface TemplateContract
 		array $mapping
 	);
 
+	/**
+	 * Returns a container that contains all groups of fields that are present in this template. Each group will represent a portlet in the catalog UI. The order of the portlets is identical to the order the groups were added to the container.
+	 */
+	public function getGroupContainer(
+	):TemplateGroupContainer;
+
+	/**
+	 * Adds a group of fields to the template. Those groups will be displayed in the UI. The position in the UI depends
+on the order of adding the groups to the template.
+	 */
+	public function addGroupContainer(
+		TemplateGroupContainer $groupContainer
+	);
+
 	public function addMutator(
 		callable $callback
 	);
@@ -56,6 +71,20 @@ interface TemplateContract
 	 */
 	public function addPostMutator(
 		callable $callback
+	);
+
+	/**
+	 * Defines the pre mutator of the template. The pre mutator is applied to the export data before the mapping occurs. If possible, don't use this directly and let it be handled by the catalogue template provider.
+	 */
+	public function setPreMutator(
+		CatalogMutatorContract $preMutator
+	);
+
+	/**
+	 * Defines the post mutator of the template. The post mutator is applied to the export data once the mapping occurred. If possible, don't use this directly and let it be handled by the catalogue template provider.
+	 */
+	public function setPostMutator(
+		CatalogMutatorContract $postMutator
 	);
 
 	/**
@@ -91,6 +120,18 @@ interface TemplateContract
 	 */
 	public function getPostMutators(
 	):array;
+
+	/**
+	 * Returns the pre mutator of the template.
+	 */
+	public function getPreMutator(
+	):CatalogMutatorContract;
+
+	/**
+	 * Returns the post mutator of the template.
+	 */
+	public function getPostMutator(
+	):CatalogMutatorContract;
 
 	/**
 	 * Defines the callback function that will be called after the mapping is done for a field with the key "sku".

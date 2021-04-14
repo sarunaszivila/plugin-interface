@@ -1,9 +1,11 @@
 <?php
 namespace Plenty\Modules\Catalog\Templates;
 
+use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
+use Plenty\Modules\Catalog\Contracts\CatalogGroupedTemplateProviderContract;
+use Plenty\Modules\Catalog\Contracts\CatalogMutatorContract;
 use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
 use Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigContract;
-use Plenty\Modules\Catalog\Contracts\CatalogTemplateProviderContract;
 use Plenty\Modules\Catalog\Contracts\TemplateContract;
 use Plenty\Modules\Catalog\Validators\FilterValidator;
 use Plenty\Modules\Catalog\Validators\GeneralFieldValidator;
@@ -110,6 +112,27 @@ abstract class Template implements TemplateContract
 	);
 
 	abstract public function getMetaInfo(
+	);
+
+	abstract public function getGroupContainer(
+	):TemplateGroupContainer;
+
+	abstract public function addGroupContainer(
+		TemplateGroupContainer $groupContainer
+	);
+
+	abstract public function getPreMutator(
+	):CatalogMutatorContract;
+
+	abstract public function getPostMutator(
+	):CatalogMutatorContract;
+
+	abstract public function setPreMutator(
+		CatalogMutatorContract $preMutator
+	);
+
+	abstract public function setPostMutator(
+		CatalogMutatorContract $postMutator
 	);
 
 	/**
