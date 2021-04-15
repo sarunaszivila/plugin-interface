@@ -14,4 +14,10 @@ abstract class ValidateVatNumber
 	abstract public function getVatNumber(
 	):string;
 
+	/**
+	 * Get the country id to validate.
+	 */
+	abstract public function getCountryId(
+	):int;
+
 }

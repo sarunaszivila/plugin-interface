@@ -23,4 +23,12 @@ interface OrderRepositoryContract
 		int $orderId = null
 	):Order;
 
+	/**
+	 * Switch the payment method of an existing order.
+	 */
+	public function switchPaymentMethodForOrder(
+		int $orderId, 
+		int $paymentMethodId
+	):Order;
+
 }
