@@ -3,7 +3,7 @@ namespace Plenty\Modules\Catalog\Models;
 
 
 /**
- * To be written.
+ * A simple template field is used to fill a specific key through a data source which is defined by the user.
  */
 abstract class SimpleTemplateField 
 {
