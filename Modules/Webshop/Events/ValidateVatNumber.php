@@ -20,4 +20,10 @@ abstract class ValidateVatNumber
 	abstract public function getCountryId(
 	):int;
 
+	/**
+	 * Return fallback status for unavailable service.
+	 */
+	abstract public static function getFallbackStatusServiceUnavailable(
+	):float;
+
 }
