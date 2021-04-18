@@ -640,6 +640,15 @@ and integers that can contain null values.
 	}
 
 	/**
+	 * The field under validation must be a valid mail address
+	 */
+	public function validMailAddress(
+	):self
+	{
+		return $this;
+	}
+
+	/**
 	 * The field under validation must be an array and must contain only the keys in the provided accepted list.
 	 */
 	public function arrayKeysInList(
