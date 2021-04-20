@@ -8,7 +8,7 @@ namespace Plenty\Modules\Property\Models;
 abstract class Property 
 {
 
-	const MAX_ITEMS_PER_PAGE = 50;
+	const MAX_ITEMS_PER_PAGE = 200;
 
 	const CREATED_AT = 'createdAt';
 
