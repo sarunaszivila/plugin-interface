@@ -12,6 +12,7 @@ interface ContentCacheRepositoryContract
 	 * Enable content caching for current response so next request on this resource will be delivered from content cache.
 	 */
 	public function enableCacheForResponse(
+		array $options = []
 	);
 
 	/**
