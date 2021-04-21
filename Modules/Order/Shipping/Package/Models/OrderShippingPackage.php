@@ -42,6 +42,8 @@ public		$createdAt;
 	
 public		$updatedAt;
 	
+public		$packageSscc;
+	
 public		$order;
 	
 	/**

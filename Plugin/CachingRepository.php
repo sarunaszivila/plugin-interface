@@ -86,6 +86,10 @@ abstract class CachingRepository
 		string $key
 	):bool;
 
+	abstract public function deleteByPrefix(
+		string $prefix
+	);
+
 	abstract public static function getPrefix(
 	):string;
 
