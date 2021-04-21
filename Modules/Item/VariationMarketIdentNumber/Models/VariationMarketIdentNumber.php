@@ -8,6 +8,14 @@ namespace Plenty\Modules\Item\VariationMarketIdentNumber\Models;
 abstract class VariationMarketIdentNumber 
 {
 
+	const ASIN_TYPE = 'ASIN';
+
+	const EPID_TYPE = 'EPID';
+
+	const UPC_TYPE = 'UPC';
+
+	const RSIN_TYPE = 'RSIN';
+
 	const ITEMS_PER_PAGE = 50;
 
 	const TYPES = ['ASIN','EPID'];

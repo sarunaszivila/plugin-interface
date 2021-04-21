@@ -5,6 +5,7 @@ use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
 use Plenty\Modules\Catalog\Contracts\CatalogGroupedTemplateProviderContract;
 use Plenty\Modules\Catalog\Contracts\CatalogMutatorContract;
 use Plenty\Modules\Catalog\Contracts\TemplateContract;
+use Plenty\Modules\Catalog\Dummy\EmptyCatalogMutator;
 
 /**
  * The AbstractGroupedTemplateProvider is the abstract class that should be used to implement a template provider.
@@ -12,18 +13,6 @@ use Plenty\Modules\Catalog\Contracts\TemplateContract;
 abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplateProviderContract
 
 {
-
-	/**
-	 * Returns a container in which all TemplateGroups of this template are collected.
-	 */
-	abstract public function getTemplateGroupContainer(
-	):TemplateGroupContainer;
-
-	/**
-	 * Returns the filters that will be applied in each export of templates that will be booted by this provider.
-	 */
-	abstract public function getFilter(
-	):array;
 
 	/**
 	 * Returns the Mutator instance that should be called to manipulate data before the mapping.
@@ -56,6 +45,18 @@ abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplate
 	):array;
 
 	abstract public function getCustomFilters(
+	):array;
+
+	/**
+	 * Returns a container in which all TemplateGroups of this template are collected.
+	 */
+	abstract public function getTemplateGroupContainer(
+	):TemplateGroupContainer;
+
+	/**
+	 * Returns the filters that will be applied in each export of templates that will be booted by this provider.
+	 */
+	abstract public function getFilter(
 	):array;
 
 	abstract public function getAssignments(
