@@ -65,6 +65,14 @@ Gets the first warehouse location matching the given label. The label must be sp
 	):WarehouseLocation;
 
 	/**
+	 * Updates several Storage Locations in a single DB Transaction
+with the data provided
+	 */
+	public function updateStorageLocations(
+		 $data
+	);
+
+	/**
 	 * Delete a warehouse location
 	 */
 	public function deleteWarehouseLocation(
