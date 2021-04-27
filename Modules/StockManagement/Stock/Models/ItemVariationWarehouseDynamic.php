@@ -5,7 +5,7 @@ namespace Plenty\Modules\StockManagement\Stock\Models;
 /**
  * The stock model. There are 4 different stock terms used in plentymarkets. The physical stock, the net stock, the reserved stock and the stock reserved for listings.
  */
-abstract class Stock 
+abstract class ItemVariationWarehouseDynamic 
 {
 
 	const ITEMS_PER_PAGE = 50;
@@ -38,7 +38,7 @@ public		$reservedBundle;
 	
 public		$averagePurchasePrice;
 	
-public		$averageOrderQuantity;
+public		$averageSale;
 	
 public		$updatedAt;
 	
