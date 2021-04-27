@@ -30,6 +30,12 @@ interface BasketItemRepositoryContract
 	):array;
 
 	/**
+	 * Returns a sum of quantities for all basket items of the current customer session.
+	 */
+	public function getBasketItemQuantity(
+	):float;
+
+	/**
 	 * Creates an item with the specified item data in the shopping cart.
 	 */
 	public function addBasketItem(
