@@ -75,4 +75,22 @@ interface CatalogExportServiceContract
 	public function getPreview(
 	);
 
+	/**
+	 * Defines a list of keys that will be considered in the export. That means that only keys that exist in the catalog
+and are defined in this list will be contained in the export result. This will overwrite the forbidden keys that
+were defined by the forbidExportKeys method.
+	 */
+	public function allowExportKeys(
+		array $keys
+	);
+
+	/**
+	 * Defines a list of keys that will not be considered in the export. That means that only keys that exist in the
+catalog and are not defined in this list will be contained in the export result. This will overwrite the allowed
+keys that were defined by the allowExportKeys method.
+	 */
+	public function forbidExportKeys(
+		array $keys
+	);
+
 }

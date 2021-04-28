@@ -3,7 +3,7 @@ namespace Plenty\Modules\Order\Models;
 
 
 /**
- * The order reference model. Each OrderReference has an origin order (the most top order) and a referenced order ('parent' or 'reorder').
+ * The order reference model. Each OrderReference has an origin order (the most top order) and a referenced order.
  */
 abstract class OrderReference 
 {
@@ -11,6 +11,10 @@ abstract class OrderReference
 	const REFERENCE_TYPE_PARENT = 'parent';
 
 	const REFERENCE_TYPE_REORDER = 'reorder';
+
+	const REFERENCE_TYPE_GROUPED = 'grouped';
+
+	const REFERENCE_TYPE_SPLIT = 'split';
 
 	const CREATED_AT = 'createdAt';
 

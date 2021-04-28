@@ -19,7 +19,9 @@ interface OrderItemRepositoryContract
 	 * Get an order item
 	 */
 	public function getOrderItem(
-		int $orderItemId
+		int $orderItemId, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):OrderItem;
 
 	/**
