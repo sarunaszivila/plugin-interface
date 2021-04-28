@@ -38,7 +38,7 @@ public		$reservedBundle;
 	
 public		$averagePurchasePrice;
 	
-public		$averageOrderQuantity;
+public		$averageSale;
 	
 public		$updatedAt;
 	
