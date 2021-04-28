@@ -2,6 +2,7 @@
 namespace Plenty\Modules\Order\Contracts;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Collection;
 use Plenty\Exceptions\ValidationException;
 use Plenty\Modules\Order\Models\Order;
 use Plenty\Modules\Order\Scheduler\Models\OrderScheduler;
@@ -32,6 +33,15 @@ interface OrderRepositoryContract
 		array $with = [], 
 		bool $lazyLoaded = false
 	):Order;
+
+	/**
+	 * List orders by external order ID
+	 */
+	public function getByExternalOrderId(
+		string $externalOrderId, 
+		array $with = [], 
+		bool $lazyLoaded = false
+	):Collection;
 
 	/**
 	 * Create an order
