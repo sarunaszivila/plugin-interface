@@ -59,6 +59,12 @@ abstract class FilteredPaginatedResult
 		 $result
 	);
 
+	abstract public function sumMetaData(
+	);
+
+	abstract public function rowCountMetaData(
+	);
+
 	/**
 	 * Convert the object to its JSON representation.
 	 */

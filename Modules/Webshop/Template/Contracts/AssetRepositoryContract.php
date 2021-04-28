@@ -14,7 +14,8 @@ interface AssetRepositoryContract
 	public function addAsset(
 		string $path, 
 		string $as = "", 
-		string $rel = "preload"
+		string $rel = "preload", 
+		array $additionalParams = []
 	);
 
 }

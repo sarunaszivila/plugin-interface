@@ -38,6 +38,17 @@ interface StockStorageLocationRepositoryContract
 	):PaginatedResult;
 
 	/**
+	 * List  stock of all storage locations of a warehouse with pim entry
+	 */
+	public function listStockStorageLocationsByWarehouseIdPim(
+		int $warehouseId, 
+		array $columns = [], 
+		int $page = 1, 
+		int $itemsPerPage = 50, 
+		array $with = []
+	):PaginatedResult;
+
+	/**
 	 * Resets all Criteria filters by creating a new instance of the builder object.
 	 */
 	public function clearCriteria(
