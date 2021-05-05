@@ -51,6 +51,12 @@ abstract class FacetSearchFactory
 	):self;
 
 	/**
+	 * Return selected facet values as array
+	 */
+	abstract public function getFacetValues(
+	):array;
+
+	/**
 	 * Get the default configuration of a search factory.
 	 */
 	abstract public static function default(
@@ -346,6 +352,18 @@ abstract class FacetSearchFactory
 
 	abstract public function withSalableVariationCount(
 	):VariationSearchFactory;
+
+	/**
+	 * Return given min price
+	 */
+	abstract public function getMinPrice(
+	):float;
+
+	/**
+	 * Return given max price
+	 */
+	abstract public function getMaxPrice(
+	):float;
 
 	/**
 	 * Create a new factory instance based on properties of an existing factory.
