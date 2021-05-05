@@ -26,6 +26,15 @@ interface OrderRepositoryContract
 	):Order;
 
 	/**
+	 * Get an order
+	 */
+	public function findById(
+		int $orderId, 
+		array $with = [], 
+		bool $lazyLoaded = false
+	):Order;
+
+	/**
 	 * Get an order by external order ID
 	 */
 	public function findOrderByExternalOrderId(
@@ -52,6 +61,14 @@ interface OrderRepositoryContract
 	):Order;
 
 	/**
+	 * Create an order
+	 */
+	public function create(
+		array $data, 
+		array $coupons = []
+	):Order;
+
+	/**
 	 * Update an order
 	 */
 	public function updateOrder(
@@ -60,11 +77,26 @@ interface OrderRepositoryContract
 	):Order;
 
 	/**
+	 * Update an order
+	 */
+	public function update(
+		int $orderId, 
+		array $data
+	):Order;
+
+	/**
 	 * Delete an order
 	 */
 	public function deleteOrder(
 		int $orderId
 	):bool;
+
+	/**
+	 * Delete an order
+	 */
+	public function delete(
+		int $orderId
+	);
 
 	/**
 	 * Restore an order
@@ -152,6 +184,14 @@ interface OrderRepositoryContract
 	);
 
 	/**
+	 * Cancel an order
+	 */
+	public function cancel(
+		int $orderId, 
+		array $data = []
+	);
+
+	/**
 	 * Find the order for the given order ID and access key.
 	 */
 	public function findOrderByAccessKey(
@@ -170,6 +210,14 @@ interface OrderRepositoryContract
 	 * Complete an incomplete order.
 	 */
 	public function completeOrder(
+		int $orderId, 
+		array $data = []
+	):Order;
+
+	/**
+	 * Complete an incomplete order.
+	 */
+	public function complete(
 		int $orderId, 
 		array $data = []
 	):Order;

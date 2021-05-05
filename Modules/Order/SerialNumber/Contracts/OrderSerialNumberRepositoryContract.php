@@ -24,4 +24,11 @@ interface OrderSerialNumberRepositoryContract
 		int $orderItemId
 	);
 
+	/**
+	 * Create item serial number and bind it to order item
+	 */
+	public function addSerialNumberToOrderItem(
+		array $orderSerialNumber
+	):OrderSerialNumber;
+
 }

@@ -16,6 +16,8 @@ abstract class OrderReference
 
 	const REFERENCE_TYPE_SPLIT = 'split';
 
+	const REFERENCE_TYPE_MULTI_ORDER = 'multi_order';
+
 	const CREATED_AT = 'createdAt';
 
 	const UPDATED_AT = 'updatedAt';
