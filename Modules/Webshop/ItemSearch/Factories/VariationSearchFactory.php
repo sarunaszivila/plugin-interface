@@ -385,6 +385,18 @@ abstract class VariationSearchFactory
 	):VariationSearchFactory;
 
 	/**
+	 * Return given min price
+	 */
+	abstract public function getMinPrice(
+	):float;
+
+	/**
+	 * Return given max price
+	 */
+	abstract public function getMaxPrice(
+	):float;
+
+	/**
 	 * Create a new factory instance based on properties of an existing factory.
 	 */
 	abstract public function inherit(
