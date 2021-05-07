@@ -1,12 +1,84 @@
 <?php
 namespace Plenty\Modules\Catalog\Contracts;
 
+use Exception;
+use Illuminate\Support\Collection;
+use Illuminate\Support\LazyCollection;
+use Plenty\Modules\Catalog\Models\CatalogExportResult;
+use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
+use Plenty\Modules\Catalog\Services\FileHandlers\ResourceHandler;
 
 /**
- * To be written
+ * Converts export results
  */
 interface CatalogResultConverterContract 
 {
+
+	/**
+	 * Get the mime type of the resource returned by this converter
+	 */
+	public function getMIME(
+	):string;
+
+	/**
+	 * Get the lazy collection's chunk size
+	 */
+	public function getChunkSize(
+	):int;
+
+	/**
+	 * Get the source lazy collection
+	 */
+	public function getSourceCollection(
+	):CatalogLazyCollection;
+
+	/**
+	 * Set settings that you need to use in your converter
+	 */
+	public function setSettings(
+		array $settings = []
+	):CatalogResultConverterContract;
+
+	/**
+	 * Convert from an array
+	 */
+	public function fromArray(
+		array $data
+	):CatalogResultConverterContract;
+
+	/**
+	 * Convert from a Collection
+	 */
+	public function fromCollection(
+		Collection $collection
+	):CatalogResultConverterContract;
+
+	/**
+	 * Convert from a CatalogLazyCollection
+	 */
+	public function fromCatalogLazyCollection(
+		CatalogLazyCollection $catalogLazyCollection
+	):CatalogResultConverterContract;
+
+	/**
+	 * Convert from a CatalogExportResult
+	 */
+	public function fromCatalogExportResult(
+		CatalogExportResult $exportResult
+	):CatalogResultConverterContract;
+
+	/**
+	 * Convert and prepare data for marketplace
+	 */
+	public function toMarketplace(
+	);
+
+	/**
+	 * Convert and prepare resource for download
+	 */
+	public function toDownload(
+		ResourceHandler $resourceHandler
+	);
 
 	/**
 	 * Through this a single entry of a catalog result should be added

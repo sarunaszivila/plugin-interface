@@ -2,9 +2,11 @@
 namespace Plenty\Modules\Catalog\Templates\Providers;
 
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
+use Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigContract;
 use Plenty\Modules\Catalog\Contracts\CatalogGroupedTemplateProviderContract;
 use Plenty\Modules\Catalog\Contracts\CatalogMutatorContract;
 use Plenty\Modules\Catalog\Contracts\TemplateContract;
+use Plenty\Modules\Catalog\Dummy\DynamicConfig\EmptyCatalogDynamicConfig;
 use Plenty\Modules\Catalog\Dummy\EmptyCatalogMutator;
 
 /**
@@ -13,6 +15,12 @@ use Plenty\Modules\Catalog\Dummy\EmptyCatalogMutator;
 abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplateProviderContract
 
 {
+
+	abstract public function isPreviewable(
+	):bool;
+
+	abstract public function getDynamicConfig(
+	):CatalogDynamicConfigContract;
 
 	/**
 	 * Returns the Mutator instance that should be called to manipulate data before the mapping.
@@ -46,6 +54,12 @@ abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplate
 
 	abstract public function getCustomFilters(
 	):array;
+
+	abstract public function hasExtendedMappings(
+	):bool;
+
+	abstract public function getResultConverterClass(
+	):string;
 
 	/**
 	 * Returns a container in which all TemplateGroups of this template are collected.

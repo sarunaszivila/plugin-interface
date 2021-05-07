@@ -57,4 +57,19 @@ interface CatalogGroupedTemplateProviderContract
 	public function getAssignments(
 	):array;
 
+	/**
+	 * Determines if this template supports extended mappings
+	 */
+	public function hasExtendedMappings(
+	):bool;
+
+	public function isPreviewable(
+	):bool;
+
+	public function getDynamicConfig(
+	):CatalogDynamicConfigContract;
+
+	public function getResultConverterClass(
+	):string;
+
 }

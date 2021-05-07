@@ -2,6 +2,7 @@
 namespace Plenty\Modules\Catalog\Contracts;
 
 use Exception;
+use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
 
 /**
  * The CatalogExportRepositoryContract is the interface for the catalogue export repository. It allows to receive an instance of CatalogExportServiceContract to export a specific catalogue.
@@ -33,5 +34,20 @@ interface CatalogExportRepositoryContract
 		bool $public = false, 
 		string $token = ""
 	):array;
+
+	/**
+	 * Initiates the dev queue. Stores the file on S3 and can be fetched using getDevCachedResult()
+	 */
+	public function initiateDevQueue(
+		string $id
+	):bool;
+
+	/**
+	 * Gets the latest prebuilt, cached result
+	 */
+	public function getDevCachedResult(
+		string $id, 
+		int $maximumAgeInSeconds = 3600
+	):CatalogLazyCollection;
 
 }
