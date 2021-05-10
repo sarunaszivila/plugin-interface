@@ -3,7 +3,6 @@ namespace Plenty\Modules\Catalog\Contracts;
 
 use Exception;
 use Illuminate\Support\Collection;
-use Illuminate\Support\LazyCollection;
 use Plenty\Modules\Catalog\Models\CatalogExportResult;
 use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
 use Plenty\Modules\Catalog\Services\FileHandlers\ResourceHandler;
