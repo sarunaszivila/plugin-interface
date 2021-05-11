@@ -47,7 +47,7 @@ interface CatalogExportRepositoryContract
 	 */
 	public function getDevCachedResult(
 		string $id, 
-		int $maximumAgeInSeconds = 3600
+		int $maximumAgeInSeconds = 14400
 	):CatalogLazyCollection;
 
 }
