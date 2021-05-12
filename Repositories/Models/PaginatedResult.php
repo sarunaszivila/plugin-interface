@@ -52,6 +52,12 @@ abstract class PaginatedResult
 		 $result
 	);
 
+	abstract public function sumMetaData(
+	);
+
+	abstract public function rowCountMetaData(
+	);
+
 	/**
 	 * Get the instance as an array.
 	 */
