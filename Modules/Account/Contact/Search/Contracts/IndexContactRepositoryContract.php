@@ -34,4 +34,7 @@ interface IndexContactRepositoryContract
 	public function execute(
 	);
 
+	public function getElasticSearchVersion(
+	):float;
+
 }

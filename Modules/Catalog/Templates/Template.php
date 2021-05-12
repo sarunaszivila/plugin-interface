@@ -2,6 +2,7 @@
 namespace Plenty\Modules\Catalog\Templates;
 
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
+use Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigContract;
 use Plenty\Modules\Catalog\Contracts\CatalogGroupedTemplateProviderContract;
 use Plenty\Modules\Catalog\Contracts\CatalogMutatorContract;
 use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
@@ -207,6 +208,12 @@ abstract class Template implements TemplateContract
 
 	abstract public function hasResultConverter(
 	):bool;
+
+	abstract public function hasExtendedMappings(
+	):bool;
+
+	abstract public function getDynamicConfig(
+	):CatalogDynamicConfigContract;
 
 	abstract public function isBooted(
 	):bool;

@@ -3,6 +3,7 @@ namespace Plenty\Modules\Cloud\ElasticSearch\Lib\Index\Info;
 
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Index\IndexInterface;
 use Plenty\Modules\Cloud\ElasticSearch\Services\ClientFactory;
+use stdClass;
 
 /**
  * to bew written
