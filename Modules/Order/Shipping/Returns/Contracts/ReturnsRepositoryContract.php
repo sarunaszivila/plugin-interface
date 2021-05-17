@@ -48,6 +48,16 @@ interface ReturnsRepositoryContract
 	):PaginatedResult;
 
 	/**
+	 * Get a paginated list of all order returns
+	 */
+	public function getOrderReturnsByReturnsOrderId(
+		int $returnsOrderId, 
+		array $with = [], 
+		int $page = 1, 
+		int $itemsPerPage = 50
+	):PaginatedResult;
+
+	/**
 	 * Create a return
 	 */
 	public function createReturnsOrder(
