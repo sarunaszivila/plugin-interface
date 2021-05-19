@@ -223,6 +223,9 @@ on the order of adding the groups to the template.
 		array $assignment
 	);
 
+	public function getDynamicConfig(
+	):CatalogDynamicConfigContract;
+
 	/**
 	 * Returns the current boot state of the template.
 	 */
