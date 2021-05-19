@@ -36,6 +36,8 @@ public		$primaryResultSortOrder;
 	
 public		$searchId;
 	
+public		$sortBy;
+	
 	/**
 	 * Returns this model as an array.
 	 */
