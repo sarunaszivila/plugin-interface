@@ -9,12 +9,32 @@ abstract class CatalogMappingValue
 {
 
 	/**
-	 * Returns this model as an array.
+	 * CatalogMappingValue constructor.
 	 */
-	public function toArray(
-	):array
-	{
-		return [];
-	}
+	abstract public function __construct(
+		string $identifier, 
+		string $label, 
+		 $exportValue, 
+		string $parentId = null, 
+		bool $hasChildren = false
+	);
+
+	abstract public function getIdentifier(
+	):string;
+
+	abstract public function getLabel(
+	):string;
+
+	abstract public function getExportValue(
+	);
+
+	abstract public function hasChildren(
+	):bool;
+
+	abstract public function getParentId(
+	):string;
+
+	abstract public function toArray(
+	):array;
 
 }
