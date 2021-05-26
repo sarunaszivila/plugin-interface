@@ -1,6 +1,7 @@
 <?php
 namespace Plenty\Modules\Catalog\Contracts;
 
+use Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer;
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
 
 /**
@@ -51,11 +52,26 @@ interface CatalogGroupedTemplateProviderContract
 	public function getMetaInfo(
 	):array;
 
+	/**
+	 * Returns the custom filters that will be configurable in the catalog UI. Each configured custom filter will be applied in each export of templates that will be booted by this provider.
+	 */
 	public function getCustomFilters(
 	):array;
 
 	public function getAssignments(
 	):array;
+
+	/**
+	 * Returns the container that collects all filters of templates that are booted by this specific provider.
+	 */
+	public function getFilterContainer(
+	):CatalogFilterBuilderContainer;
+
+	/**
+	 * Returns the container that collects all custom filters of templates that are booted by this specific provider.
+	 */
+	public function getCustomFilterContainer(
+	):CatalogFilterBuilderContainer;
 
 	/**
 	 * Determines if this template supports extended mappings
@@ -71,5 +87,8 @@ interface CatalogGroupedTemplateProviderContract
 
 	public function getResultConverterClass(
 	):string;
+
+	public function allowsCustomFilter(
+	):bool;
 
 }

@@ -1,6 +1,7 @@
 <?php
 namespace Plenty\Modules\Catalog\Templates;
 
+use Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer;
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
 use Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigContract;
 use Plenty\Modules\Catalog\Contracts\CatalogGroupedTemplateProviderContract;
@@ -8,6 +9,7 @@ use Plenty\Modules\Catalog\Contracts\CatalogMutatorContract;
 use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
 use Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigContract;
 use Plenty\Modules\Catalog\Contracts\TemplateContract;
+use Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter;
 use Plenty\Modules\Catalog\Validators\FilterValidator;
 use Plenty\Modules\Catalog\Validators\GeneralFieldValidator;
 use Plenty\Modules\Catalog\Validators\MappingValidator;
@@ -197,6 +199,13 @@ abstract class Template implements TemplateContract
 		bool $isPreviewable
 	);
 
+	abstract public function allowsCustomFilter(
+	):bool;
+
+	abstract public function setCustomFilters(
+		bool $allowsCustomFilter
+	):bool;
+
 	abstract public function getRuntimeConfig(
 	):CatalogRuntimeConfigContract;
 
@@ -217,5 +226,19 @@ abstract class Template implements TemplateContract
 
 	abstract public function isBooted(
 	):bool;
+
+	abstract public function getCustomFilterContainer(
+	):CatalogFilterBuilderContainer;
+
+	abstract public function getFilterContainer(
+	):CatalogFilterBuilderContainer;
+
+	abstract public function setCustomFilterContainer(
+		CatalogFilterBuilderContainer $customFilterContainer
+	);
+
+	abstract public function setFilterContainer(
+		CatalogFilterBuilderContainer $filterContainer
+	);
 
 }

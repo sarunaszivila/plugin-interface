@@ -70,4 +70,7 @@ abstract class ComplexTemplateField implements \Plenty\Modules\Catalog\Contracts
 		CatalogTemplateFieldCallableContract $callable
 	);
 
+	abstract public function toArray(
+	):array;
+
 }

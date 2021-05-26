@@ -16,6 +16,10 @@ abstract class Export
 
 	const DATA_TYPE_ORDER = 'order';
 
+	const DATA_TYPE_PURCHASE_ORDER = 'purchase_order';
+
+	const DATA_TYPE_PURCHASE_ORDER_ITEM = 'purchase_order_item';
+
 	const DATA_TYPE_ORDER_ITEM = 'order_item';
 
 	const DATA_TYPE_CONTACT = 'contact';

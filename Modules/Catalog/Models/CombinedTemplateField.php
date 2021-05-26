@@ -71,4 +71,7 @@ abstract class CombinedTemplateField implements \Plenty\Modules\Catalog\Contract
 		CatalogTemplateFieldCallableContract $callable
 	);
 
+	abstract public function toArray(
+	):array;
+
 }
