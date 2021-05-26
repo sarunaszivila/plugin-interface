@@ -132,6 +132,18 @@ interface Attribute
 	):self;
 
 	/**
+	 * The field under validation must be a valid order ID for an order that is not deleted.
+	 */
+	public function validOrderId(
+	):self;
+
+	/**
+	 * The field under validation must be a valid order item ID for an order that is not deleted.
+	 */
+	public function validOrderItemId(
+	):self;
+
+	/**
 	 * The field under validation must be a valid plentyId.
 	 */
 	public function validPlentyId(

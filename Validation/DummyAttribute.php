@@ -507,6 +507,24 @@ and integers that can contain null values.
 	}
 
 	/**
+	 * The field under validation must be a valid order ID for an order that is not deleted.
+	 */
+	public function validOrderId(
+	):self
+	{
+		return $this;
+	}
+
+	/**
+	 * The field under validation must be a valid order item ID for an order that is not deleted.
+	 */
+	public function validOrderItemId(
+	):self
+	{
+		return $this;
+	}
+
+	/**
 	 * Add custom Role
 	 */
 	public function customRule(
