@@ -24,6 +24,10 @@ abstract class BaseSearch implements SearchInterface
 		bool $isSourceDisabled
 	);
 
+	abstract public function setTrackTotalHits(
+		bool $trackTotalHits
+	);
+
 	abstract public function addFilter(
 		TypeInterface $filter
 	):self;

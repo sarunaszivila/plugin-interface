@@ -4,6 +4,7 @@ namespace Plenty\Modules\Catalog\Contracts\Status;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Plenty\Modules\Catalog\Models\Status\CatalogStatus;
+use Plenty\Modules\Catalog\Services\Status\Run;
 use Plenty\Repositories\Contracts\FilterableContract;
 use Plenty\Repositories\Criteria\Contracts\CriteriableContract;
 use Plenty\Repositories\Criteria\Criteria;
@@ -28,6 +29,15 @@ interface CatalogStatusRepositoryContract
 	public function get(
 		int $id
 	);
+
+	/**
+	 * Get the latest status of a specific catalog
+	 */
+	public function getLatestStatusOfCatalog(
+		string $catalogId, 
+		string $type = "run", 
+		string $subtype = "async"
+	):CatalogStatus;
 
 	/**
 	 * List catalog statuses
