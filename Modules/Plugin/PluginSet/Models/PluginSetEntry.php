@@ -28,6 +28,8 @@ public		$commit;
 	
 public		$position;
 	
+public		$isInstalledFromGit;
+	
 	/**
 	 * Returns this model as an array.
 	 */
