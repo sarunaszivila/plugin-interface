@@ -34,4 +34,7 @@ abstract class CatalogMappingValue
 	abstract public function getParentId(
 	):string;
 
+	abstract public function toArray(
+	):array;
+
 }

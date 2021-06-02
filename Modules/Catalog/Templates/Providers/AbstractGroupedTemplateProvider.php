@@ -1,6 +1,7 @@
 <?php
 namespace Plenty\Modules\Catalog\Templates\Providers;
 
+use Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer;
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
 use Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigContract;
 use Plenty\Modules\Catalog\Contracts\CatalogGroupedTemplateProviderContract;
@@ -17,6 +18,9 @@ abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplate
 {
 
 	abstract public function isPreviewable(
+	):bool;
+
+	abstract public function allowsCustomFilter(
 	):bool;
 
 	abstract public function getDynamicConfig(
@@ -55,6 +59,12 @@ abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplate
 	abstract public function getCustomFilters(
 	):array;
 
+	abstract public function getAssignments(
+	):array;
+
+	abstract public function getFilter(
+	):array;
+
 	abstract public function hasExtendedMappings(
 	):bool;
 
@@ -68,12 +78,15 @@ abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplate
 	):TemplateGroupContainer;
 
 	/**
-	 * Returns the filters that will be applied in each export of templates that will be booted by this provider.
+	 * Returns the container that collects all filters of templates that are booted by this specific provider.
 	 */
-	abstract public function getFilter(
-	):array;
+	abstract public function getFilterContainer(
+	):CatalogFilterBuilderContainer;
 
-	abstract public function getAssignments(
-	):array;
+	/**
+	 * Returns the container that collects all custom filters of templates that are booted by this specific provider.
+	 */
+	abstract public function getCustomFilterContainer(
+	):CatalogFilterBuilderContainer;
 
 }

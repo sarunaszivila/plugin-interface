@@ -2,6 +2,7 @@
 namespace Plenty\Modules\Catalog\Contracts;
 
 use Illuminate\Contracts\Support\Arrayable;
+use Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer;
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
 
 /**
@@ -185,6 +186,19 @@ on the order of adding the groups to the template.
 		bool $isPreviewable
 	);
 
+	/**
+	 * Determines if this template enable/disable custom filters
+	 */
+	public function allowsCustomFilter(
+	):bool;
+
+	/**
+	 * Disable or not the custom filters
+	 */
+	public function setCustomFilters(
+		bool $allowsCustomFilter
+	):bool;
+
 	public function hasRuntimeConfig(
 	):bool;
 
@@ -208,6 +222,32 @@ on the order of adding the groups to the template.
 	 */
 	public function addCustomFilter(
 		array $customFilter
+	);
+
+	/**
+	 * Returns the container that collects all custom filters of this specific template.
+	 */
+	public function getCustomFilterContainer(
+	):CatalogFilterBuilderContainer;
+
+	/**
+	 * Returns the container that collects all filters of this specific template.
+	 */
+	public function getFilterContainer(
+	):CatalogFilterBuilderContainer;
+
+	/**
+	 * Sets the container that collects all custom filters of this specific template.
+	 */
+	public function setCustomFilterContainer(
+		CatalogFilterBuilderContainer $customFilterContainer
+	);
+
+	/**
+	 * Sets the container that collects all filters of this specific template.
+	 */
+	public function setFilterContainer(
+		CatalogFilterBuilderContainer $filterContainer
 	);
 
 	/**
