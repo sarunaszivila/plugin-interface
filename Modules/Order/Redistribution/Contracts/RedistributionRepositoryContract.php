@@ -39,6 +39,14 @@ interface RedistributionRepositoryContract
 	):bool;
 
 	/**
+	 * Create a redistribution from a parent order
+	 */
+	public function createFromParent(
+		int $orderId, 
+		array $data
+	):Order;
+
+	/**
 	 * Update currency
 	 */
 	public function updateCurrency(
