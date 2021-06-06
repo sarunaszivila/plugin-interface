@@ -34,6 +34,8 @@ public		$targets;
 	
 public		$meta;
 	
+public		$spreadSheetExport;
+	
 public		$direct;
 	
 public		$freeOfCharge;
