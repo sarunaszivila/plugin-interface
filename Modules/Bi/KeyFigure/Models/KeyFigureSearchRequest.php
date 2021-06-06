@@ -18,6 +18,8 @@ public		$dimensions;
 	
 public		$scaleBasis;
 	
+public		$resultId;
+	
 public		$resultUnit;
 	
 public		$target;
@@ -35,6 +37,8 @@ public		$scaleBasisSortOrder;
 public		$primaryResultSortOrder;
 	
 public		$searchId;
+	
+public		$calculatedAt;
 	
 public		$sortBy;
 	
