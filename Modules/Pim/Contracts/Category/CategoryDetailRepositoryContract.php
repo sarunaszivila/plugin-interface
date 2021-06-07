@@ -4,7 +4,6 @@ namespace Plenty\Modules\Pim\Contracts\Category;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Collection;
-use Plenty\Modules\Category\Models\CategoryDetails;
 use Plenty\Repositories\Contracts\FilterableContract;
 use Plenty\Repositories\Criteria\Contracts\CriteriableContract;
 use Plenty\Repositories\Criteria\Criteria;
@@ -22,7 +21,7 @@ interface CategoryDetailRepositoryContract
 		array $with = [], 
 		int $page = 1, 
 		int $perPage = 50
-	):array;
+	):Collection;
 
 	public function getCount(
 	):int;

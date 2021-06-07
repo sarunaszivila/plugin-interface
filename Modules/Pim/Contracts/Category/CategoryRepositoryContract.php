@@ -16,14 +16,14 @@ interface CategoryRepositoryContract
 {
 
 	/**
-	 * Search categories
+	 * Search for categories
 	 */
 	public function search(
 		array $with = [], 
 		int $page = 1, 
 		int $perPage = 50, 
 		array $sorting = []
-	):array;
+	):Collection;
 
 	/**
 	 * Get one category by ID
