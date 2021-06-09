@@ -28,6 +28,7 @@ the necessary manipulation so the filter that is returned by getFilter can be co
 	 * Returns the filter that will be given to the export
 	 */
 	public function getFilter(
+		array $settings
 	);
 
 	/**
