@@ -81,7 +81,7 @@ and are defined in this list will be contained in the export result. This will o
 were defined by the forbidExportKeys method.
 	 */
 	public function allowExportKeys(
-		array $keys
+		string $keys
 	);
 
 	/**
@@ -90,7 +90,7 @@ catalog and are not defined in this list will be contained in the export result.
 keys that were defined by the allowExportKeys method.
 	 */
 	public function forbidExportKeys(
-		array $keys
+		string $keys
 	);
 
 }
