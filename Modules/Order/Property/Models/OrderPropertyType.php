@@ -176,6 +176,8 @@ abstract class OrderPropertyType
 
 	const REORDER_ITEM_NAME = 85;
 
+	const FORCE_GROSS_NET = 86;
+
 	const TRADE_REPRESENTATIVE = 992;
 
 	const EBAY_CANCELLATION = 993;

@@ -8,6 +8,8 @@ namespace Plenty\Modules\BI\KeyFigure\Models;
 abstract class KeyFigureResultResponse 
 {
 	
+public		$id;
+	
 public		$scaleBasis;
 	
 public		$scaleBasisInt;

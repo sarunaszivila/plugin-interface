@@ -132,6 +132,14 @@ public		$salesRepresentativeContactId;
 	
 public		$anonymizeAt;
 	
+public		$isLead;
+	
+public		$leadStatusKey;
+	
+public		$inLeadStatusSince;
+	
+public		$leadStatusUpdateAt;
+	
 	/**
 	 * Returns this model as an array.
 	 */
