@@ -124,6 +124,8 @@ public		$transactionSums;
 	
 public		$paymentTerms;
 	
+public		$tags;
+	
 	/**
 	 * Returns this model as an array.
 	 */

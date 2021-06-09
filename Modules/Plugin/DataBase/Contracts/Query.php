@@ -140,6 +140,13 @@ abstract class Query
 	):self;
 
 	/**
+	 * Create a nested where condition
+	 */
+	abstract public function whereNested(
+		callable $callback
+	):self;
+
+	/**
 	 * Add a "group by" statement to the query.
 	 */
 	abstract public function groupBy(
