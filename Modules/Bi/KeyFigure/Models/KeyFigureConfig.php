@@ -54,6 +54,8 @@ public		$dimensionValues;
 	
 public		$category;
 	
+public		$aggregateFunctions;
+	
 	/**
 	 * Returns this model as an array.
 	 */
