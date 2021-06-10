@@ -36,6 +36,8 @@ public		$names;
 	
 public		$vatCodes;
 	
+public		$region;
+	
 	/**
 	 * Returns this model as an array.
 	 */

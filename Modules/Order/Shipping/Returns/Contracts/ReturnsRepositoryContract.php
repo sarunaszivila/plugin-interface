@@ -73,4 +73,8 @@ interface ReturnsRepositoryContract
 		array $data
 	);
 
+	public function deleteReturnsByReturnsOrderId(
+		int $returnsOrderId
+	);
+
 }
