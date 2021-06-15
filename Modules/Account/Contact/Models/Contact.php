@@ -140,6 +140,8 @@ public		$inLeadStatusSince;
 	
 public		$leadStatusUpdatedAt;
 	
+public		$leadStatusUpdateAt;
+	
 	/**
 	 * Returns this model as an array.
 	 */
