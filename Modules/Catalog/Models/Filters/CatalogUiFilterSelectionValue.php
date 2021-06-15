@@ -14,4 +14,18 @@ abstract class CatalogUiFilterSelectionValue
 	abstract public function getValue(
 	);
 
+	/**
+	 * Sets the icon and color to show and image in the select of the filter
+	 */
+	abstract public function setIcon(
+		string $icon, 
+		string $color = null
+	);
+
+	abstract public function getIcon(
+	);
+
+	abstract public function getColor(
+	);
+
 }

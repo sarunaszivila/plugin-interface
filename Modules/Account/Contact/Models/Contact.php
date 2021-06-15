@@ -138,7 +138,7 @@ public		$leadStatusKey;
 	
 public		$inLeadStatusSince;
 	
-public		$leadStatusUpdateAt;
+public		$leadStatusUpdatedAt;
 	
 	/**
 	 * Returns this model as an array.

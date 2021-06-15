@@ -178,6 +178,8 @@ abstract class OrderPropertyType
 
 	const FORCE_GROSS_NET = 86;
 
+	const SUBSCRIPTION_PLENTY_ID = 87;
+
 	const TRADE_REPRESENTATIVE = 992;
 
 	const EBAY_CANCELLATION = 993;
