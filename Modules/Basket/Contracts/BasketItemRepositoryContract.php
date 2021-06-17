@@ -24,6 +24,13 @@ interface BasketItemRepositoryContract
 	):BasketItem;
 
 	/**
+	 * Gets all existing item by item data in the shopping cart of the current customer session.
+	 */
+	public function findAllExistingOneByData(
+		array $data
+	):array;
+
+	/**
 	 * Lists all items in the shopping cart of the current customer session.
 	 */
 	public function all(

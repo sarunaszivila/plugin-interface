@@ -138,6 +138,8 @@ public		$leadStatusKey;
 	
 public		$inLeadStatusSince;
 	
+public		$leadStatusUpdatedAt;
+	
 public		$leadStatusUpdateAt;
 	
 	/**
