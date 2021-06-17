@@ -41,6 +41,14 @@ interface ReorderRepositoryContract
 	):bool;
 
 	/**
+	 * Create a reorder from a parent order
+	 */
+	public function createFromParent(
+		int $orderId, 
+		array $data
+	):Order;
+
+	/**
 	 * Update currency
 	 */
 	public function updateCurrency(

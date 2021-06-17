@@ -33,7 +33,8 @@ abstract class DataFieldProvider
 	public function addChildProvider(
 		string $label, 
 		string $childProviderClass, 
-		array $params = []
+		array $params = [], 
+		string $identifier = ""
 	)
 	{
 		return null;

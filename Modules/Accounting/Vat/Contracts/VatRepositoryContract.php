@@ -86,6 +86,16 @@ interface VatRepositoryContract
 	):array;
 
 	/**
+	 * List VAT configuration for a date
+	 */
+	public function findVatByLocationIdAndDate(
+		int $locationId, 
+		string $date, 
+		array $relations = [], 
+		array $columns = []
+	):array;
+
+	/**
 	 * Get a VAT configuration by id
 	 */
 	public function getVatById(
