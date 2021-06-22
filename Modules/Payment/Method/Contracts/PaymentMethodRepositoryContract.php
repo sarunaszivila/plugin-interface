@@ -44,6 +44,14 @@ interface PaymentMethodRepositoryContract
 	):PaymentMethod;
 
 	/**
+	 * Gets a payment method. The plugin and the payment key must be specified.
+	 */
+	public function findByPluginAndPaymentKey(
+		string $pluginKey, 
+		string $paymentKey
+	):PaymentMethod;
+
+	/**
 	 * Get an array with all payment methods with the ID as key and the name as value.
 	 */
 	public function getPreviewList(
