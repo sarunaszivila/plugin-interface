@@ -49,11 +49,23 @@ interface Checkout
 	);
 
 	/**
+	 * Get the currency of the current shopping cart.
+	 */
+	public function getCurrency(
+	):string;
+
+	/**
 	 * Updates the currency. The currency must be specified.
 	 */
 	public function setCurrency(
 		string $currency
 	);
+
+	/**
+	 * Get the referrer ID from the current shopping cart.
+	 */
+	public function getBasketReferrerId(
+	):float;
 
 	/**
 	 * Updates the ID of the order referrer. The ID must be specified.

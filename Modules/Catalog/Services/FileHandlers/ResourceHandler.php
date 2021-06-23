@@ -28,6 +28,13 @@ abstract class ResourceHandler
 	);
 
 	/**
+	 * Write a JSON line to build a JSONL file
+	 */
+	abstract public function writeJSONLine(
+		 $data
+	);
+
+	/**
 	 * Rewinds resource
 	 */
 	abstract public function rewind(
