@@ -62,6 +62,9 @@ Hope dies last
 	abstract public function getMIME(
 	);
 
+	abstract public function getFileExtension(
+	);
+
 	abstract public function getSourceCollection(
 	);
 

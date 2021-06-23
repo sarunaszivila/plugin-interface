@@ -46,6 +46,14 @@ interface VatInitContract
 	):float;
 
 	/**
+	 * Get the revenue account of a VAT field
+	 */
+	public function getRevenueAccount(
+		int $vatField, 
+		bool $restrictedToDigitalItems = false
+	):string;
+
+	/**
 	 * Get the VAT configuration to be used for VAT calculation
 	 */
 	public function getUsingVat(
