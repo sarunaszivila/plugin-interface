@@ -20,6 +20,12 @@ interface CatalogResultConverterContract
 	):string;
 
 	/**
+	 * Get the file extension of the resource returned by this converter
+	 */
+	public function getFileExtension(
+	):string;
+
+	/**
 	 * Get the lazy collection's chunk size
 	 */
 	public function getChunkSize(

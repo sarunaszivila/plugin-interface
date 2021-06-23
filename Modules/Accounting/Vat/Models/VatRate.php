@@ -18,6 +18,8 @@ public		$vatRate;
 	
 public		$name;
 	
+public		$revenueAccount;
+	
 	/**
 	 * Returns this model as an array.
 	 */
