@@ -3,9 +3,9 @@ namespace Plenty\Modules\Pim\DocumentService\Models\Variation;
 
 
 /**
- * The Property values of the variation
+ * The Property selection values of the variation
  */
-abstract class PropertyValue 
+abstract class PropertySelectionValue 
 {
 	
 	/**
@@ -14,19 +14,9 @@ abstract class PropertyValue
 	public		$id;
 	
 	/**
-	 * @var string
+	 * @var int
 	 */
-	public		$lang;
-	
-	/**
-	 * @var string
-	 */
-	public		$value;
-	
-	/**
-	 * @var string
-	 */
-	public		$description;
+	public		$selectionId;
 	
 	/**
 	 * Returns this model as an array.

@@ -1,14 +1,12 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * The property selection model.
+ * The property relation model.
  */
-abstract class PropertySelection 
+abstract class PropertyRelation 
 {
-
-	const MAX_ITEMS_PER_PAGE = 50;
 
 	const CREATED_AT = 'createdAt';
 
@@ -18,15 +16,27 @@ public		$id;
 	
 public		$propertyId;
 	
-public		$position;
+public		$type;
+	
+public		$targetId;
+	
+public		$groupId;
+	
+public		$markup;
+	
+public		$value;
 	
 public		$createdAt;
 	
 public		$updatedAt;
 	
-public		$relation;
-	
 public		$property;
+	
+public		$group;
+	
+public		$values;
+	
+public		$selectionValues;
 	
 	/**
 	 * Returns this model as an array.

@@ -30,6 +30,12 @@ public		$options;
 	
 public		$relation;
 	
+public		$amazons;
+	
+public		$selections;
+	
+public		$groups;
+	
 	/**
 	 * Returns this model as an array.
 	 */

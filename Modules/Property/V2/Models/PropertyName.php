@@ -1,14 +1,12 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * The property selection model.
+ * The property name model. A property can have several names. One name per language. Each name has a unique ID.
  */
-abstract class PropertySelection 
+abstract class PropertyName 
 {
-
-	const MAX_ITEMS_PER_PAGE = 50;
 
 	const CREATED_AT = 'createdAt';
 
@@ -18,13 +16,15 @@ public		$id;
 	
 public		$propertyId;
 	
-public		$position;
+public		$lang;
+	
+public		$name;
+	
+public		$description;
 	
 public		$createdAt;
 	
 public		$updatedAt;
-	
-public		$relation;
 	
 public		$property;
 	

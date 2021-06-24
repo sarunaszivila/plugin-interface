@@ -2,10 +2,9 @@
 namespace Plenty\Modules\Pim\VariationDataInterface\Model\Attributes;
 
 use Exception;
-use Plenty\Modules\Item\SalesPrice\Models\SalesPrice;
 use Plenty\Modules\Pim\VariationDataInterface\Contracts\AttributeInterface;
 use Plenty\Modules\Pim\VariationDataInterface\Model\VariationDataInterfaceContext;
-use Plenty\Modules\Property\Models\Property;
+use Plenty\Modules\Property\V2\Models\Property;
 
 /**
  * The property part of the variation
@@ -13,7 +12,7 @@ use Plenty\Modules\Property\Models\Property;
 abstract class VariationPropertyAttribute 
 {
 
-	const PROPERTY = 'Plenty\Modules\Property\Models\Property';
+	const PROPERTY = 'Plenty\Modules\Property\V2\Models\Property';
 
 	const PRIMARY_KEY = 'variationId';
 

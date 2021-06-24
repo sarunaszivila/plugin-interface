@@ -1,14 +1,12 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * The property selection model.
+ * The property amazon model.
  */
-abstract class PropertySelection 
+abstract class PropertyAmazon 
 {
-
-	const MAX_ITEMS_PER_PAGE = 50;
 
 	const CREATED_AT = 'createdAt';
 
@@ -18,13 +16,15 @@ public		$id;
 	
 public		$propertyId;
 	
-public		$position;
+public		$platform;
+	
+public		$category;
+	
+public		$field;
 	
 public		$createdAt;
 	
 public		$updatedAt;
-	
-public		$relation;
 	
 public		$property;
 	
