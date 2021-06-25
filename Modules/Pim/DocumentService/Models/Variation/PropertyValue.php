@@ -9,7 +9,7 @@ abstract class PropertyValue
 {
 	
 	/**
-	 * @var string
+	 * @var int
 	 */
 	public		$id;
 	
