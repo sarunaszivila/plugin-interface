@@ -120,6 +120,20 @@ interface CatalogRepositoryContract
 	):array;
 
 	/**
+	 * Enable a catalog's devcache
+	 */
+	public function enableDevcache(
+		string $id
+	):Catalog;
+
+	/**
+	 * Disable a catalog's devcache
+	 */
+	public function disableDevcache(
+		string $id
+	):Catalog;
+
+	/**
 	 * Gets the preview for an export with a specific catalog
 	 */
 	public function getCatalogPreview(
