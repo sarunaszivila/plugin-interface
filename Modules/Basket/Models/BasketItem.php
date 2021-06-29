@@ -50,6 +50,8 @@ public		$price;
 	
 public		$givenPrice;
 	
+public		$givenVatId;
+	
 public		$useGivenPrice;
 	
 public		$inputWidth;
