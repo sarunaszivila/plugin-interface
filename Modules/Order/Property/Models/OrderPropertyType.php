@@ -180,6 +180,10 @@ abstract class OrderPropertyType
 
 	const SUBSCRIPTION_PLENTY_ID = 87;
 
+	const MARKET_TAX_ID = 88;
+
+	const MARKET_EORI = 89;
+
 	const TRADE_REPRESENTATIVE = 992;
 
 	const EBAY_CANCELLATION = 993;
