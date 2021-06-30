@@ -1,14 +1,12 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * The property selection model.
+ * The property group relation model. The model shows which property is related to which property group.
  */
-abstract class PropertySelection 
+abstract class PropertyGroupRelation 
 {
-
-	const MAX_ITEMS_PER_PAGE = 50;
 
 	const CREATED_AT = 'createdAt';
 
@@ -18,13 +16,9 @@ public		$id;
 	
 public		$propertyId;
 	
-public		$position;
+public		$groupId;
 	
-public		$createdAt;
-	
-public		$updatedAt;
-	
-public		$relation;
+public		$group;
 	
 public		$property;
 	

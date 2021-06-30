@@ -1,5 +1,5 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
@@ -7,8 +7,6 @@ namespace Plenty\Modules\Property\Models;
  */
 abstract class PropertySelection 
 {
-
-	const MAX_ITEMS_PER_PAGE = 50;
 
 	const CREATED_AT = 'createdAt';
 
@@ -24,9 +22,9 @@ public		$createdAt;
 	
 public		$updatedAt;
 	
-public		$relation;
-	
 public		$property;
+	
+public		$names;
 	
 	/**
 	 * Returns this model as an array.

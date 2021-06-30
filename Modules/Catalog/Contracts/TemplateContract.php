@@ -187,10 +187,24 @@ on the order of adding the groups to the template.
 	);
 
 	/**
+	 * Used to activate / deactivate the possibility to extend the mappings with fields that are not present in the template
+	 */
+	public function allowExtendedMappings(
+		bool $allowExtendedMappings
+	);
+
+	/**
 	 * Determines if this template enable/disable custom filters
 	 */
 	public function allowsCustomFilter(
 	):bool;
+
+	/**
+	 * Used to activate / deactivate the possibility to apply custom filters
+	 */
+	public function allowCustomFilter(
+		bool $allowsCustomFilter
+	);
 
 	/**
 	 * Disable or not the custom filters
