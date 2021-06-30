@@ -124,6 +124,8 @@ public		$transactionSums;
 	
 public		$paymentTerms;
 	
+public		$shippingInformation;
+	
 public		$tags;
 	
 	/**

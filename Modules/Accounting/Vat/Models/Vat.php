@@ -10,6 +10,10 @@ abstract class Vat
 
 	const ITEMS_PER_PAGE = 50;
 
+	const MIN_VAT_FIELD = 0;
+
+	const MAX_VAT_FIELD = 5;
+
 	const CREATED_AT = 'createdAt';
 
 	const UPDATED_AT = 'updatedAt';

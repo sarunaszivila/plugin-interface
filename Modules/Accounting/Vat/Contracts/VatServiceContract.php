@@ -33,4 +33,12 @@ interface VatServiceContract
 		int $vatField
 	):string;
 
+	/**
+	 * Get the revenue account for the given vat field.
+	 */
+	public function getRevenueAccount(
+		Vat $vat, 
+		int $vatField
+	):string;
+
 }
