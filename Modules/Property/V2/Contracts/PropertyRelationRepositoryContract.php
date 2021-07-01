@@ -50,6 +50,20 @@ interface PropertyRelationRepositoryContract
 	):PropertyRelation;
 
 	/**
+	 * Creates a list of property relations.
+	 */
+	public function createBulk(
+		array $data
+	);
+
+	/**
+	 * Updates a list of property relations.
+	 */
+	public function updateBulk(
+		array $data
+	);
+
+	/**
 	 * Deletes a property relation. The ID of the property relation must be specified.
 	 */
 	public function delete(
