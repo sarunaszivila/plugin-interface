@@ -46,6 +46,8 @@ public		$packageSscc;
 	
 public		$order;
 	
+public		$items;
+	
 	/**
 	 * Returns this model as an array.
 	 */
