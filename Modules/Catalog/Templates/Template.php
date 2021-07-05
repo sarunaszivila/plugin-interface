@@ -199,8 +199,16 @@ abstract class Template implements TemplateContract
 		bool $isPreviewable
 	);
 
+	abstract public function allowExtendedMappings(
+		bool $allowExtendedMappings
+	);
+
 	abstract public function allowsCustomFilter(
 	):bool;
+
+	abstract public function allowCustomFilter(
+		bool $allowsCustomFilter
+	);
 
 	abstract public function setCustomFilters(
 		bool $allowsCustomFilter
