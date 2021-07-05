@@ -7,7 +7,6 @@ use Plenty\Exceptions\ValidationException;
 use Plenty\Modules\Messenger\Models\Attachment;
 use Plenty\Modules\Messenger\Models\Message;
 use Plenty\Modules\Messenger\Models\MessageMetaDataControls;
-use Plenty\Repositories\Contracts\FilterableContract;
 
 /**
  * The MessengerRepositoryContract is the interface for the messenger repository. This interface defines methods to add and show/list messages.
@@ -120,30 +119,5 @@ interface MessengerRepositoryContract
 	 */
 	public function getTotalEntries(
 	):int;
-
-	/**
-	 * Sets the filter array.
-	 */
-	public function setFilters(
-		array $filters = []
-	);
-
-	/**
-	 * Returns the filter array.
-	 */
-	public function getFilters(
-	);
-
-	/**
-	 * Returns a collection of parsed filters as Condition object
-	 */
-	public function getConditions(
-	);
-
-	/**
-	 * Clears the filter array.
-	 */
-	public function clearFilters(
-	);
 
 }
