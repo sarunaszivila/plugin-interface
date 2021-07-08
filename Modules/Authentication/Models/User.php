@@ -34,6 +34,10 @@ public		$user;
 	
 public		$username;
 	
+public		$real_name;
+	
+public		$lang;
+	
 public		$userClass;
 	
 public		$userRights;

@@ -24,7 +24,7 @@ abstract class TagRelationship
 
 	const TAG_TYPE_MESSAGE_BILLABLE = 'messageBillable';
 
-	const AVAILABLE_TYPES = ['category','ticket','variation','board','contact','order','messenger','messageBillable'];
+	const TAG_TYPE_MESSAGE_CLEARING_SUB_ACCOUNT = 'messageClearingSubAccount';
 
 	const RELATIONSHIP_AVAILABILITY_RELATION = 'availability';
 
