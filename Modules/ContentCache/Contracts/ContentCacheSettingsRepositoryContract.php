@@ -53,4 +53,12 @@ interface ContentCacheSettingsRepositoryContract
 		int $plentyId
 	):bool;
 
+	public function getInstantInvalidationCount(
+		int $plentyId
+	):int;
+
+	public function invalidateInstantly(
+		int $plentyId
+	);
+
 }
