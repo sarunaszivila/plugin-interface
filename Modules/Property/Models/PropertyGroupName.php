@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property group name model. A property group can have several names. One name per language. Each name has a unique ID.
+ * Deprecated. Use V2 instead.The property group name model. A property group can have several names. One name per language. Each name has a unique ID.
  */
 abstract class PropertyGroupName 
 {

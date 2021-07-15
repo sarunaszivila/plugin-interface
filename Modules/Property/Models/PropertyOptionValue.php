@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property option value model.
+ * Deprecated. Use V2 instead.The property option value model.
  */
 abstract class PropertyOptionValue 
 {

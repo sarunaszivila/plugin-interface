@@ -1,9 +1,9 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * Deprecated. Use V2 instead.The property relation value model.
+ * The property relation value model. Includes the values in different languages for properties of the type short text and long text.
  */
 abstract class PropertyRelationValue 
 {
@@ -14,7 +14,7 @@ abstract class PropertyRelationValue
 	
 public		$id;
 	
-public		$propertyRelationId;
+public		$relationId;
 	
 public		$lang;
 	
@@ -25,6 +25,8 @@ public		$description;
 public		$createdAt;
 	
 public		$updatedAt;
+	
+public		$relation;
 	
 	/**
 	 * Returns this model as an array.

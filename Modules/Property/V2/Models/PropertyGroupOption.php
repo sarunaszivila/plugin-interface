@@ -1,12 +1,18 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * Deprecated. Use V2 instead.The property group option model.
+ * The property group option model.
  */
 abstract class PropertyGroupOption 
 {
+
+	const TYPE_SURCHARGE_TYPE = 'surchargeType';
+
+	const TYPE_GROUP_TYPE = 'groupType';
+
+	const TYPES = ['surchargeType','groupType'];
 
 	const CREATED_AT = 'createdAt';
 
@@ -14,9 +20,9 @@ abstract class PropertyGroupOption
 	
 public		$id;
 	
-public		$propertyGroupId;
+public		$groupId;
 	
-public		$groupOptionIdentifier;
+public		$type;
 	
 public		$value;
 	

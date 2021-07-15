@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property relation markup model.
+ * Deprecated. Use V2 instead.The property relation markup model.
  */
 abstract class PropertyRelationMarkup 
 {

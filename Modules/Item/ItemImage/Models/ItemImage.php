@@ -30,6 +30,8 @@ public		$md5Checksum;
 	
 public		$md5ChecksumOriginal;
 	
+public		$hasLinkedVariations;
+	
 public		$size;
 	
 public		$width;

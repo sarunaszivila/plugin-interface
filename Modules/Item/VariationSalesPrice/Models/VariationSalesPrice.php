@@ -20,6 +20,10 @@ public		$salesPriceId;
 	
 public		$price;
 	
+public		$updatedAt;
+	
+public		$createdAt;
+	
 	/**
 	 * Returns this model as an array.
 	 */

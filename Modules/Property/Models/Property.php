@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property model. Properties allow to further describe items, categories etc. A property can have one name per language. The property names have an own model.
+ * Deprecated. Use V2 instead.The property model. Properties allow to further describe items, categories etc. A property can have one name per language. The property names have an own model.
  */
 abstract class Property 
 {
@@ -29,6 +29,12 @@ public		$names;
 public		$options;
 	
 public		$relation;
+	
+public		$amazons;
+	
+public		$selections;
+	
+public		$groups;
 	
 	/**
 	 * Returns this model as an array.

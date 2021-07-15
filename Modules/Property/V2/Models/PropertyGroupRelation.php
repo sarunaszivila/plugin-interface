@@ -1,9 +1,9 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * Deprecated. Use V2 instead.The property group relation model. The model shows which property is related to which property group.
+ * The property group relation model. The model shows which property is related to which property group.
  */
 abstract class PropertyGroupRelation 
 {
@@ -12,9 +12,15 @@ abstract class PropertyGroupRelation
 
 	const UPDATED_AT = 'updatedAt';
 	
+public		$id;
+	
 public		$propertyId;
 	
-public		$propertyGroupId;
+public		$groupId;
+	
+public		$group;
+	
+public		$property;
 	
 	/**
 	 * Returns this model as an array.

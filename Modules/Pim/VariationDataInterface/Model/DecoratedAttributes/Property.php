@@ -17,6 +17,11 @@ abstract class Property
 	/**
 	 * @var int
 	 */
+	public		$id;
+	
+	/**
+	 * @var int
+	 */
 	public		$propertyId;
 	
 	/**
@@ -30,9 +35,24 @@ abstract class Property
 	public		$markup;
 	
 	/**
+	 * @var string
+	 */
+	public		$value;
+	
+	/**
+	 * @var string
+	 */
+	public		$rawValue;
+	
+	/**
 	 * @var array
 	 */
 	public		$values;
+	
+	/**
+	 * @var array
+	 */
+	public		$selectionValues;
 	
 	/**
 	 * Returns this model as an array.

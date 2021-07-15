@@ -1,14 +1,12 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * Deprecated. Use V2 instead.The property amazon model.
+ * The property name model. A property can have several names. One name per language. Each name has a unique ID.
  */
-abstract class PropertyAmazon 
+abstract class PropertyName 
 {
-
-	const MAX_ITEMS_PER_PAGE = 50;
 
 	const CREATED_AT = 'createdAt';
 
@@ -18,17 +16,17 @@ public		$id;
 	
 public		$propertyId;
 	
-public		$platform;
+public		$lang;
 	
-public		$category;
+public		$name;
 	
-public		$field;
+public		$description;
 	
 public		$createdAt;
 	
 public		$updatedAt;
 	
-public		$propertyRelation;
+public		$property;
 	
 	/**
 	 * Returns this model as an array.

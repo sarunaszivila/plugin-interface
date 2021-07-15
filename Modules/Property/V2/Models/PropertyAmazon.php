@@ -1,14 +1,12 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * Deprecated. Use V2 instead.The property amazon model.
+ * The property amazon model.
  */
 abstract class PropertyAmazon 
 {
-
-	const MAX_ITEMS_PER_PAGE = 50;
 
 	const CREATED_AT = 'createdAt';
 
@@ -28,7 +26,7 @@ public		$createdAt;
 	
 public		$updatedAt;
 	
-public		$propertyRelation;
+public		$property;
 	
 	/**
 	 * Returns this model as an array.

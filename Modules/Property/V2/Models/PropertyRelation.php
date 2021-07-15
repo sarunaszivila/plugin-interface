@@ -1,11 +1,11 @@
 <?php
-namespace Plenty\Modules\Property\Models;
+namespace Plenty\Modules\Property\V2\Models;
 
 
 /**
- * Deprecated. Use V2 instead.The property market model.
+ * The property relation model.
  */
-abstract class PropertyMarket 
+abstract class PropertyRelation 
 {
 
 	const CREATED_AT = 'createdAt';
@@ -16,15 +16,27 @@ public		$id;
 	
 public		$propertyId;
 	
-public		$referrerId;
+public		$type;
 	
-public		$referrerSubId;
+public		$targetId;
+	
+public		$groupId;
+	
+public		$markup;
 	
 public		$value;
 	
 public		$createdAt;
 	
 public		$updatedAt;
+	
+public		$property;
+	
+public		$group;
+	
+public		$values;
+	
+public		$selectionValues;
 	
 	/**
 	 * Returns this model as an array.
