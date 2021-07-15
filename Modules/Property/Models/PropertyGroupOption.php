@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property group option model.
+ * Deprecated. Use V2 instead.The property group option model.
  */
 abstract class PropertyGroupOption 
 {

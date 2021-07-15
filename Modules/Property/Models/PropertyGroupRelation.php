@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property group relation model. The model shows which property is related to which property group.
+ * Deprecated. Use V2 instead.The property group relation model. The model shows which property is related to which property group.
  */
 abstract class PropertyGroupRelation 
 {

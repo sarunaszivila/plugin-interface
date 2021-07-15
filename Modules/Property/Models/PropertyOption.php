@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property option model. Property options allow to add further specification to a property. Each property option can have several values. The porperty option values have an own model.
+ * Deprecated. Use V2 instead.The property option model. Property options allow to add further specification to a property. Each property option can have several values. The porperty option values have an own model.
  */
 abstract class PropertyOption 
 {

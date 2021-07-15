@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property selection model.
+ * Deprecated. Use V2 instead.The property selection model.
  */
 abstract class PropertySelection 
 {
@@ -25,6 +25,8 @@ public		$createdAt;
 public		$updatedAt;
 	
 public		$relation;
+	
+public		$allRelations;
 	
 public		$property;
 	
