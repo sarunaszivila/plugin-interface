@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property relation value model.
+ * Deprecated. Use V2 instead.The property relation value model.
  */
 abstract class PropertyRelationValue 
 {

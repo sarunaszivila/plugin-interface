@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property market model.
+ * Deprecated. Use V2 instead.The property market model.
  */
 abstract class PropertyMarket 
 {

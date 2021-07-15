@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property availability model.
+ * Deprecated. Use V2 instead. The property availability model.
  */
 abstract class PropertyAvailability 
 {

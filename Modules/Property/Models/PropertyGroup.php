@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property group model. A property group allows to group several properties together and helps to structure properties. Property groups can have different names per language. The property group names have an own model.
+ * Deprecated. Use V2 instead.The property group model. A property group allows to group several properties together and helps to structure properties. Property groups can have different names per language. The property group names have an own model.
  */
 abstract class PropertyGroup 
 {

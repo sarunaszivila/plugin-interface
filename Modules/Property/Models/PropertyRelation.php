@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property relation model allows to relate a property e.g. to a variation or other targets.
+ * Deprecated. Use V2 instead.The property relation model allows to relate a property e.g. to a variation or other targets.
  */
 abstract class PropertyRelation 
 {

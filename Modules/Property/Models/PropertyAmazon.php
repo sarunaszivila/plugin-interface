@@ -3,7 +3,7 @@ namespace Plenty\Modules\Property\Models;
 
 
 /**
- * The property amazon model.
+ * Deprecated. Use V2 instead.The property amazon model.
  */
 abstract class PropertyAmazon 
 {
