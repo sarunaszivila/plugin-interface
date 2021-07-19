@@ -184,6 +184,8 @@ abstract class OrderPropertyType
 
 	const MARKET_EORI = 89;
 
+	const IS_REVERSE_CHARGED = 90;
+
 	const TRADE_REPRESENTATIVE = 992;
 
 	const EBAY_CANCELLATION = 993;
