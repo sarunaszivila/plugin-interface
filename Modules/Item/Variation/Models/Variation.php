@@ -174,6 +174,8 @@ public		$variationProperties;
 	
 public		$properties;
 	
+public		$propertiesV2;
+	
 public		$variationSalesPrices;
 	
 public		$marketItemNumbers;
