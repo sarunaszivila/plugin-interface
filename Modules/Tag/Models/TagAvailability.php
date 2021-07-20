@@ -24,6 +24,8 @@ abstract class TagAvailability
 
 	const TAG_TYPE_MESSAGE_BILLABLE = 'messageBillable';
 
+	const TAG_TYPE_MESSAGE_CLEARING_SUB_ACCOUNT = 'messageClearingSubAccount';
+
 	const CREATED_AT = 'createdAt';
 
 	const UPDATED_AT = 'updatedAt';
