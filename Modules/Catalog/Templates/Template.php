@@ -226,6 +226,13 @@ abstract class Template implements TemplateContract
 	abstract public function hasResultConverter(
 	):bool;
 
+	abstract public function getDefaultCatalogSettings(
+	):array;
+
+	abstract public function setDefaultCatalogSettings(
+		array $defaultCatalogSettings
+	);
+
 	abstract public function hasExtendedMappings(
 	):bool;
 
