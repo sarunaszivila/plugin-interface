@@ -71,6 +71,9 @@ abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplate
 	abstract public function getResultConverterClass(
 	):string;
 
+	abstract public function getDefaultCatalogSettings(
+	):array;
+
 	/**
 	 * Returns a container in which all TemplateGroups of this template are collected.
 	 */

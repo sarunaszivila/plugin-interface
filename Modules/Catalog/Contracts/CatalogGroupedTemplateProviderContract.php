@@ -91,4 +91,10 @@ interface CatalogGroupedTemplateProviderContract
 	public function allowsCustomFilter(
 	):bool;
 
+	/**
+	 * Defines settings that will be applied to newly created catalogs by default
+	 */
+	public function getDefaultCatalogSettings(
+	):array;
+
 }

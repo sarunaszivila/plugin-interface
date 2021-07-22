@@ -291,6 +291,12 @@ on the order of adding the groups to the template.
 	):array;
 
 	/**
+	 * Returns the default settings a catalog that is created through this template will contain.
+	 */
+	public function getDefaultCatalogSettings(
+	):array;
+
+	/**
 	 * Get the instance as an array.
 	 */
 	public function toArray(
