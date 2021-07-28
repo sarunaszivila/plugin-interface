@@ -26,6 +26,8 @@ public		$numberOfDecimalPlaces;
 	
 public		$roundTotalsOnly;
 	
+public		$isReverseCharge;
+	
 	/**
 	 * Returns this model as an array.
 	 */
