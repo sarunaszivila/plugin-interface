@@ -10,6 +10,7 @@ use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
 use Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigContract;
 use Plenty\Modules\Catalog\Contracts\TemplateContract;
 use Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter;
+use Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer;
 use Plenty\Modules\Catalog\Validators\FilterValidator;
 use Plenty\Modules\Catalog\Validators\GeneralFieldValidator;
 use Plenty\Modules\Catalog\Validators\MappingValidator;
@@ -232,6 +233,9 @@ abstract class Template implements TemplateContract
 	abstract public function setDefaultCatalogSettings(
 		array $defaultCatalogSettings
 	);
+
+	abstract public function getResultConverterContainer(
+	):ResultConverterContainer;
 
 	abstract public function hasExtendedMappings(
 	):bool;

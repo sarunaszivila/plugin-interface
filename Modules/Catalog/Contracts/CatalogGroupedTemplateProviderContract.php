@@ -3,6 +3,7 @@ namespace Plenty\Modules\Catalog\Contracts;
 
 use Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer;
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
+use Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer;
 
 /**
  * The CatalogGroupedTemplateProviderContract is the interface that has to be implemented by the catalogue template providers. Each registered template should have a catalogue template provider (multiple templates can use the same one) to avoid booting them if they are not necessary. A catalogue template provider fills a template with data at the moment the template gets booted.Use the abstract class Plenty\Modules\Catalog\Templates\Providers\AbstractGroupedTemplateProvider.
@@ -90,6 +91,9 @@ interface CatalogGroupedTemplateProviderContract
 
 	public function allowsCustomFilter(
 	):bool;
+
+	public function getResultConverterContainer(
+	):ResultConverterContainer;
 
 	/**
 	 * Defines settings that will be applied to newly created catalogs by default

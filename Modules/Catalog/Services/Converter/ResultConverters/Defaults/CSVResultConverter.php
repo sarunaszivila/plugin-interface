@@ -23,6 +23,12 @@ abstract class CSVResultConverter extends \Plenty\Modules\Catalog\Services\Conve
 
 	const FILE_EXTENSION = 'csv';
 
+	abstract public function getKey(
+	):string;
+
+	abstract public function getLabel(
+	):string;
+
 	/**
 	 * Convert and prepare resource for download
 	 */

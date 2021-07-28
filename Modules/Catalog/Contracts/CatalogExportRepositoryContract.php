@@ -30,7 +30,7 @@ interface CatalogExportRepositoryContract
 	public function download(
 		string $id, 
 		string $hash = "", 
-		string $extension = "csv", 
+		string $converterKey = "csv", 
 		bool $public = false, 
 		string $token = ""
 	):array;

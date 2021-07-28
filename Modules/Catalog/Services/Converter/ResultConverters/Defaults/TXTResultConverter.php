@@ -6,6 +6,7 @@ use Illuminate\Support\LazyCollection;
 use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
 use Plenty\Modules\Catalog\Models\CatalogExportResult;
 use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter;
 use Plenty\Modules\Catalog\Services\FileHandlers\ResourceHandler;
 
 /**
@@ -20,6 +21,16 @@ abstract class TXTResultConverter extends \Plenty\Modules\Catalog\Services\Conve
 	const MIME_TYPE = 'text/plain';
 
 	const FILE_EXTENSION = 'txt';
+
+	abstract public function from(
+		 $data
+	):BaseResultConverter;
+
+	abstract public function getLabel(
+	):string;
+
+	abstract public function getKey(
+	):string;
 
 	/**
 	 * Convert and prepare resource for download
