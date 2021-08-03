@@ -1,11 +1,11 @@
 <?php
-namespace Plenty\Modules\Property\V2\Models;
+namespace Plenty\Modules\Property\V2\Models\UUID;
 
 
 /**
- * The property relation selection value model. Contains linked values for selections and multi selections.
+ * The property uuid relation value model. Includes the values in different languages for properties of the type short text and long text.
  */
-abstract class PropertyRelationSelection 
+abstract class PropertyRelationValue 
 {
 
 	const CREATED_AT = 'createdAt';
@@ -16,15 +16,17 @@ public		$id;
 	
 public		$relationId;
 	
-public		$selectionId;
+public		$lang;
+	
+public		$value;
+	
+public		$description;
 	
 public		$createdAt;
 	
 public		$updatedAt;
 	
 public		$relation;
-	
-public		$selection;
 	
 	/**
 	 * Returns this model as an array.
