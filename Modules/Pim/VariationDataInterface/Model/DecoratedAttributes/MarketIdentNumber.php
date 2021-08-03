@@ -7,6 +7,16 @@ namespace Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes;
  */
 abstract class MarketIdentNumber 
 {
+
+	const TYPE_ASIN = 'ASIN';
+
+	const TYPE_EPID = 'EPID';
+
+	const TYPE_UPC = 'UPC';
+
+	const TYPE_RSIN = 'RSIN';
+
+	const TYPE_MOIN = 'MOIN';
 	
 	/**
 	 * @var int

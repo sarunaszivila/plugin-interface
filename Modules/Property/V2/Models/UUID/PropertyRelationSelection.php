@@ -1,9 +1,9 @@
 <?php
-namespace Plenty\Modules\Property\V2\Models;
+namespace Plenty\Modules\Property\V2\Models\UUID;
 
 
 /**
- * The property relation selection value model. Contains linked values for selections and multi selections.
+ * The property uuid relation selection value model. Contains linked values for selections and multi selections.
  */
 abstract class PropertyRelationSelection 
 {
