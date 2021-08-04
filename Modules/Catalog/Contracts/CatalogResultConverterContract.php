@@ -14,6 +14,18 @@ interface CatalogResultConverterContract
 {
 
 	/**
+	 * Returns the identifier for this result converter. Has to be unique in its templates scope.
+	 */
+	public function getKey(
+	):string;
+
+	/**
+	 * Returns the readable representation for this converter
+	 */
+	public function getLabel(
+	):string;
+
+	/**
 	 * Get the mime type of the resource returned by this converter
 	 */
 	public function getMIME(

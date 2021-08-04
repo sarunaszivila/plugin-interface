@@ -9,6 +9,12 @@ use Plenty\Modules\Catalog\Contracts\CatalogMutatorContract;
 use Plenty\Modules\Catalog\Contracts\TemplateContract;
 use Plenty\Modules\Catalog\Dummy\DynamicConfig\EmptyCatalogDynamicConfig;
 use Plenty\Modules\Catalog\Dummy\EmptyCatalogMutator;
+use Plenty\Modules\Catalog\Services\Converter\Containers\DefaultResultConverterContainer;
+use Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults\CSVResultConverter;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults\JSONResultConverter;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults\TXTResultConverter;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults\XMLResultConverter;
 
 /**
  * The AbstractGroupedTemplateProvider is the abstract class that should be used to implement a template provider.
@@ -70,6 +76,12 @@ abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplate
 
 	abstract public function getResultConverterClass(
 	):string;
+
+	/**
+	 * Returns a container which contains all result converters for a given template.
+	 */
+	abstract public function getResultConverterContainer(
+	):ResultConverterContainer;
 
 	abstract public function getDefaultCatalogSettings(
 	):array;

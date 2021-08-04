@@ -4,6 +4,7 @@ namespace Plenty\Modules\Catalog\Contracts;
 use Illuminate\Contracts\Support\Arrayable;
 use Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer;
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
+use Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer;
 
 /**
  * The TemplateContract is the interface for templates. Templates are used to define a specific schema that can be used to create and configure a catalogue.
@@ -295,6 +296,12 @@ on the order of adding the groups to the template.
 	 */
 	public function getDefaultCatalogSettings(
 	):array;
+
+	/**
+	 * Returns the container including all registered result converters of the template
+	 */
+	public function getResultConverterContainer(
+	):ResultConverterContainer;
 
 	/**
 	 * Get the instance as an array.

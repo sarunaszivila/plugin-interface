@@ -25,6 +25,12 @@ abstract class XMLResultConverter extends \Plenty\Modules\Catalog\Services\Conve
 
 	const FILE_EXTENSION = 'xml';
 
+	abstract public function getKey(
+	):string;
+
+	abstract public function getLabel(
+	):string;
+
 	/**
 	 * Convert and prepare resource for download
 	 */

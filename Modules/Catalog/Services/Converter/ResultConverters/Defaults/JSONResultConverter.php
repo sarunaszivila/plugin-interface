@@ -22,6 +22,12 @@ abstract class JSONResultConverter extends \Plenty\Modules\Catalog\Services\Conv
 
 	const FILE_EXTENSION = 'json';
 
+	abstract public function getKey(
+	):string;
+
+	abstract public function getLabel(
+	):string;
+
 	/**
 	 * Convert and prepare resource for download
 	 */

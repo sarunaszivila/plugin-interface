@@ -119,4 +119,16 @@ abstract class BaseResultConverter implements \Plenty\Modules\Catalog\Contracts\
 	abstract public function getType(
 	):string;
 
+	/**
+	 * Returns the identifier for this result converter. Has to be unique in its templates scope.
+	 */
+	abstract public function getKey(
+	):string;
+
+	/**
+	 * Returns the readable representation for this converter
+	 */
+	abstract public function getLabel(
+	):string;
+
 }
