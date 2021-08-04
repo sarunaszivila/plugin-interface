@@ -364,6 +364,9 @@ abstract class FacetSearchFactory
 	abstract public function withSalableVariationCount(
 	):VariationSearchFactory;
 
+	abstract public function withVariationPropertySelectionValuesMutator(
+	);
+
 	/**
 	 * Return given min price
 	 */

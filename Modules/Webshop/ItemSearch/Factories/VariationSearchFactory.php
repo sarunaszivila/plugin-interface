@@ -56,6 +56,7 @@ use Plenty\Modules\Webshop\ItemSearch\Mutators\GroupedAttributeValuesMutator;
 use Plenty\Modules\Webshop\ItemSearch\Mutators\ItemUrlMutator;
 use Plenty\Modules\Webshop\ItemSearch\Mutators\OrderPropertySelectionValueMutator;
 use Plenty\Modules\Webshop\ItemSearch\Mutators\ReduceDataMutator;
+use Plenty\Modules\Webshop\ItemSearch\Mutators\VariationPropertySelectionValuesMutator;
 use Plenty\Modules\Webshop\ItemSearch\Mutators\VariationPropertyTransformMutator;
 use Plenty\Modules\Webshop\WebshopServiceProvider;
 
@@ -394,6 +395,9 @@ abstract class VariationSearchFactory
 
 	abstract public function withSalableVariationCount(
 	):VariationSearchFactory;
+
+	abstract public function withVariationPropertySelectionValuesMutator(
+	);
 
 	/**
 	 * Return given min price
