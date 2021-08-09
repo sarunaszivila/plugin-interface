@@ -4,6 +4,7 @@ namespace Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
+use Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract;
 use Plenty\Modules\Catalog\Models\CatalogExportResult;
 use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
 use Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter;
@@ -68,6 +69,12 @@ abstract class JSONResultConverter extends \Plenty\Modules\Catalog\Services\Conv
 	abstract public function fromCatalogExportResult(
 		CatalogExportResult $exportResult
 	):CatalogResultConverterContract;
+
+	/**
+	 * Get the options
+	 */
+	abstract public function getOptions(
+	):UIOptionsContract;
 
 	/**
 	 * Get the lazy collection's chunk size

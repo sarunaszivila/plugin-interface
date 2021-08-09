@@ -4,6 +4,7 @@ namespace Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
+use Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract;
 use Plenty\Modules\Catalog\Models\CatalogExportResult;
 use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
 use Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter;
@@ -22,6 +23,8 @@ abstract class TXTResultConverter extends \Plenty\Modules\Catalog\Services\Conve
 
 	const FILE_EXTENSION = 'txt';
 
+	const OPTIONS_PATH = 'converter.txt';
+
 	abstract public function from(
 		 $data
 	):BaseResultConverter;
@@ -31,6 +34,9 @@ abstract class TXTResultConverter extends \Plenty\Modules\Catalog\Services\Conve
 
 	abstract public function getKey(
 	):string;
+
+	abstract public function getOptions(
+	):UIOptionsContract;
 
 	/**
 	 * Convert and prepare resource for download

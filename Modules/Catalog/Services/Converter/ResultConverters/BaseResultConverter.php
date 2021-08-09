@@ -5,9 +5,11 @@ use Exception;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
+use Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract;
 use Plenty\Modules\Catalog\Models\CatalogExportResult;
 use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
 use Plenty\Modules\Catalog\Services\FileHandlers\ResourceHandler;
+use Plenty\Modules\Catalog\Services\UI\Options\UIOptions;
 
 /**
  * Base Result converter
@@ -62,6 +64,12 @@ abstract class BaseResultConverter implements \Plenty\Modules\Catalog\Contracts\
 	abstract public function fromCatalogExportResult(
 		CatalogExportResult $exportResult
 	):CatalogResultConverterContract;
+
+	/**
+	 * Get the options
+	 */
+	abstract public function getOptions(
+	):UIOptionsContract;
 
 	/**
 	 * Get the lazy collection's chunk size

@@ -3,6 +3,7 @@ namespace Plenty\Modules\Catalog\Contracts;
 
 use Exception;
 use Illuminate\Support\Collection;
+use Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract;
 use Plenty\Modules\Catalog\Models\CatalogExportResult;
 use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
 use Plenty\Modules\Catalog\Services\FileHandlers\ResourceHandler;
@@ -24,6 +25,12 @@ interface CatalogResultConverterContract
 	 */
 	public function getLabel(
 	):string;
+
+	/**
+	 * Returns the options that can be set in the UI
+	 */
+	public function getOptions(
+	):UIOptionsContract;
 
 	/**
 	 * Get the mime type of the resource returned by this converter
