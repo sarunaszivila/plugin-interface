@@ -35,6 +35,15 @@ interface OrderRepositoryContract
 	):Order;
 
 	/**
+	 * Get orders
+	 */
+	public function getByIds(
+		array $orderIds, 
+		array $with = [], 
+		bool $lazyLoaded = false
+	):Collection;
+
+	/**
 	 * Get an order by external order ID
 	 */
 	public function findOrderByExternalOrderId(
