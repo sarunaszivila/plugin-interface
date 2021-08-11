@@ -13,6 +13,7 @@ interface BasketRepositoryContract
 	 * Gets the shopping cart from current customer session.
 	 */
 	public function load(
+		bool $forceCreate = false
 	):Basket;
 
 	/**
