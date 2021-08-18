@@ -11,14 +11,21 @@ interface AccountContactRelationRepositoryContract
 {
 
 	/**
-	 * Gets an account contact releation. The ID of the account contact relation must be specified.
+	 * Creates a company contact relation. The ID of the account contact relation must be specified. An account is equivalent to a company.
+	 */
+	public function createCompanyContactRelation(
+		array $companyContactRelation
+	):AccountContactRelation;
+
+	/**
+	 * Gets a company contact relation. The ID of the account contact relation must be specified. An account is equivalent to a company.
 	 */
 	public function findAccountContactRelationById(
 		int $accountContactRelation
 	):AccountContactRelation;
 
 	/**
-	 * Deletes an account contact relation. The ID of the account contact relation must be specified.
+	 * Deletes a company contact relation. The ID of the account contact relation must be specified. An account is equivalent to a company.
 	 */
 	public function deleteAccountContactRelation(
 		int $accountContactRelationId
