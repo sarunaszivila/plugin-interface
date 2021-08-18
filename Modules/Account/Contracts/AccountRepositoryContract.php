@@ -16,14 +16,14 @@ interface AccountRepositoryContract
 {
 
 	/**
-	 * Creates a new account and returns it.
+	 * Creates a new company and returns it. An account is equivalent to a company.
 	 */
 	public function createAccount(
 		array $data
 	):Account;
 
 	/**
-	 * Updates an existing account and returns it. The ID of the account must be specified.
+	 * Updates an existing company and returns it. The ID of the company must be specified. An account is equivalent to a company.
 	 */
 	public function updateAccount(
 		array $data, 
@@ -31,21 +31,21 @@ interface AccountRepositoryContract
 	):Account;
 
 	/**
-	 * Deletes an account. The ID of the account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+	 * Deletes a company. The ID of the company must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful. An account is equivalent to a company.
 	 */
 	public function deleteAccount(
 		int $accountId
 	):bool;
 
 	/**
-	 * Gets an account. The ID of the account must be specified.
+	 * Gets a company. The ID of the company must be specified. An account is equivalent to a company.
 	 */
 	public function findAccountById(
 		int $accountId
 	):Account;
 
 	/**
-	 * Returns a collection of all accounts.
+	 * Returns a collection of all companies. An account is equivalent to a company.
 	 */
 	public function allAccounts(
 		array $columns = [], 
@@ -53,24 +53,37 @@ interface AccountRepositoryContract
 	):Collection;
 
 	/**
-	 * Returns a collection of all accounts.
+	 * Returns a collection of all companies. An account is equivalent to a company.
 	 */
 	public function allAccountsPaginated(
 		array $columns = [], 
 		int $page = 1, 
 		int $itemsPerPage = 50, 
-		array $with = []
+		array $with = [], 
+		string $sortBy = "id", 
+		string $sortOrder = "desc"
 	):PaginatedResult;
 
 	/**
-	 * Returns a collection of contacts that belong to the account.
+	 * Returns a collection of contacts that belong to the company. An account is equivalent to a company.
 	 */
 	public function getContactsOfAccount(
 		int $accountId
 	):Collection;
 
 	/**
-	 * Creates a new or updates an existing account.
+	 * Returns a collection of contacts that belong to the company. An account is equivalent to a company.
+	 */
+	public function getContactsOfAccountPaginated(
+		int $accountId, 
+		int $page = 1, 
+		int $itemsPerPage = 25, 
+		string $sortBy = "id", 
+		string $sortOrder = "asc"
+	):Collection;
+
+	/**
+	 * Creates a new or updates an existing company. An account is equivalent to a company.
 	 */
 	public function saveAccount(
 		array $data = []

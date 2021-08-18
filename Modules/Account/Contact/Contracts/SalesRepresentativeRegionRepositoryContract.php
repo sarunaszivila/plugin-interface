@@ -15,7 +15,7 @@ interface SalesRepresentativeRegionRepositoryContract
 {
 
 	/**
-	 * Create a region for the sales representative
+	 * Create a region for the sales representative. An account is equivalent to a company.
 	 */
 	public function createRegion(
 		array $data, 
@@ -38,14 +38,14 @@ interface SalesRepresentativeRegionRepositoryContract
 	):SalesRepresentativeRegion;
 
 	/**
-	 * Delete a region by the ID
+	 * Delete a region by the ID. An account is equivalent to a company.
 	 */
 	public function deleteRegionById(
 		int $accountContactRelationId
 	):bool;
 
 	/**
-	 * Update an existing region by the ID
+	 * Update an existing region by the ID. An account is equivalent to a company.
 	 */
 	public function updateRegionById(
 		int $accountContactRelationId, 
@@ -53,7 +53,7 @@ interface SalesRepresentativeRegionRepositoryContract
 	):SalesRepresentativeRegion;
 
 	/**
-	 * Get a region by contact ID and account ID
+	 * Get a region by contact ID and company ID. An account is equivalent to a company.
 	 */
 	public function getRegionByContactAndAccountId(
 		int $contactId, 
