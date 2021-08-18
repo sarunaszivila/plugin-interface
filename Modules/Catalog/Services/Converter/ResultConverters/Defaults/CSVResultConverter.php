@@ -5,10 +5,16 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
+use Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract;
 use Plenty\Modules\Catalog\Models\CatalogExportResult;
 use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
 use Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults\Options\DelimiterOption;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults\Options\EnclosureOption;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults\Options\HeaderRowOption;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults\Options\LineBreakOption;
 use Plenty\Modules\Catalog\Services\FileHandlers\ResourceHandler;
+use Plenty\Modules\Catalog\Services\UI\Options\UIOptions;
 
 /**
  * Default CSV Result converter
@@ -23,11 +29,16 @@ abstract class CSVResultConverter extends \Plenty\Modules\Catalog\Services\Conve
 
 	const FILE_EXTENSION = 'csv';
 
+	const OPTIONS_PATH = 'converter.csv';
+
 	abstract public function getKey(
 	):string;
 
 	abstract public function getLabel(
 	):string;
+
+	abstract public function getOptions(
+	):UIOptionsContract;
 
 	/**
 	 * Convert and prepare resource for download

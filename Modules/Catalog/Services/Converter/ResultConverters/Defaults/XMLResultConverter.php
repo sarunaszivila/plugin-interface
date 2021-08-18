@@ -6,10 +6,12 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract;
+use Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract;
 use Plenty\Modules\Catalog\Models\CatalogExportResult;
 use Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection;
 use Plenty\Modules\Catalog\Services\Converter\Converters\SpatieXMLConverter;
 use Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter;
+use Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults\Options\XMLElementName;
 use Plenty\Modules\Catalog\Services\FileHandlers\ResourceHandler;
 
 /**
@@ -30,6 +32,9 @@ abstract class XMLResultConverter extends \Plenty\Modules\Catalog\Services\Conve
 
 	abstract public function getLabel(
 	):string;
+
+	abstract public function getOptions(
+	):UIOptionsContract;
 
 	/**
 	 * Convert and prepare resource for download
