@@ -77,6 +77,10 @@ abstract class ItemFilter implements TypeInterface
 		string $itemType
 	):self;
 
+	abstract public function hasAnyRevenueAccount(
+		array $revenueAccounts
+	):self;
+
 	abstract public function toArray(
 	):array;
 
