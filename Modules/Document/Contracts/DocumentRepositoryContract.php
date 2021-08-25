@@ -150,7 +150,7 @@ interface DocumentRepositoryContract
 	 */
 	public function generateOrderDocument(
 		int $orderId, 
-		int $type, 
+		string $type, 
 		array $data
 	):bool;
 
