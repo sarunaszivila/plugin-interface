@@ -21,7 +21,8 @@ abstract class DataFieldProvider
 	public function addField(
 		string $identifier, 
 		string $label, 
-		string $expression
+		string $expression, 
+		bool $isBlockElement = false
 	)
 	{
 		return null;
