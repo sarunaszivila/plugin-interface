@@ -28,7 +28,8 @@ interface OrderRepositoryContract
 	 */
 	public function switchPaymentMethodForOrder(
 		int $orderId, 
-		int $paymentMethodId
+		int $paymentMethodId, 
+		string $accessKey = ""
 	):Order;
 
 }
