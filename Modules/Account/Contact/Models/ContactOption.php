@@ -66,6 +66,8 @@ abstract class ContactOption
 
 	const SUBTYPE_MOLLIE = 16;
 
+	const SUBTYPE_FOLLOW_UP_DATE = 17;
+
 	const CREATED_AT = 'createdAt';
 
 	const UPDATED_AT = 'updatedAt';
