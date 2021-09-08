@@ -20,4 +20,10 @@ abstract class AfterBasketItemToOrderItem
 	abstract public function getBasketItem(
 	):array;
 
+	/**
+	 * Get preview status for current event.
+	 */
+	abstract public function getIncompleteStatus(
+	):bool;
+
 }
