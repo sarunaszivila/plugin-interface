@@ -42,6 +42,8 @@ public		$updatedAt;
 	
 public		$warehouseLocationLevel;
 	
+public		$lastFinishedInventory;
+	
 	/**
 	 * Returns this model as an array.
 	 */
