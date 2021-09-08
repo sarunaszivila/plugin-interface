@@ -10,8 +10,6 @@ abstract class WarehouseLocationInventory
 
 	const MAX_ITEMS_PER_PAGE = 100;
 
-	const INVENTORY_STATUS_NOT_STARTED = 0;
-
 	const INVENTORY_STATUS_STARTED = 1;
 
 	const INVENTORY_STATUS_FINISHED = 2;
@@ -22,9 +20,13 @@ abstract class WarehouseLocationInventory
 	
 public		$id;
 	
+public		$userId;
+	
 public		$user_id;
 	
 public		$status;
+	
+public		$warehouseLocationId;
 	
 public		$warehouse_location;
 	

@@ -18,7 +18,8 @@ interface WarehouseLocationRepositoryContract
 	 * Get a warehouse location
 	 */
 	public function getWarehouseLocation(
-		int $warehouseLocation
+		int $warehouseLocation, 
+		array $with = []
 	):WarehouseLocation;
 
 	/**
