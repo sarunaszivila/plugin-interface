@@ -2,8 +2,10 @@
 namespace Plenty\Modules\Catalog\Services\UI\Options\Elements\Base;
 
 use Plenty\Modules\Catalog\Contracts\UI\UIOptionContract;
+use Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract;
 use Plenty\Modules\Catalog\Contracts\UI\UIValuesContract;
 use Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Values;
+use Plenty\Modules\Catalog\Services\UI\Options\UIOptions;
 
 /**
  * Base UI Option
@@ -53,6 +55,9 @@ abstract class BaseUIOption
 	abstract public function getValues(
 	):UIValuesContract;
 
+	abstract public function getChildren(
+	):UIOptionsContract;
+
 	abstract public function setKey(
 		string $key
 	):BaseUIOption;
@@ -79,6 +84,10 @@ abstract class BaseUIOption
 
 	abstract public function setValues(
 		UIValuesContract $values
+	):BaseUIOption;
+
+	abstract public function setChildren(
+		UIOptionsContract $children
 	):BaseUIOption;
 
 }

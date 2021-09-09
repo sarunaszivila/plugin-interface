@@ -30,6 +30,9 @@ interface UIOptionContract
 	public function getValues(
 	):UIValuesContract;
 
+	public function getChildren(
+	):UIOptionsContract;
+
 	public function setKey(
 		string $key
 	):UIOptionContract;
@@ -56,6 +59,10 @@ interface UIOptionContract
 
 	public function setValues(
 		UIValuesContract $values
+	):UIOptionContract;
+
+	public function setChildren(
+		UIOptionsContract $children
 	):UIOptionContract;
 
 	/**
