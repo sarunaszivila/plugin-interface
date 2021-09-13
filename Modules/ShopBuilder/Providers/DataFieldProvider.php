@@ -22,7 +22,8 @@ abstract class DataFieldProvider
 		string $identifier, 
 		string $label, 
 		string $expression, 
-		bool $isBlockElement = false
+		bool $isBlockElement = false, 
+		bool $isDeprecated = false
 	)
 	{
 		return null;
