@@ -14,4 +14,10 @@ abstract class FrontendLanguageChanged
 	abstract public function getLanguage(
 	):string;
 
+	/**
+	 * Get the flag for detection by browser language.
+	 */
+	abstract public function isDetectedByBrowserLanguage(
+	):bool;
+
 }
