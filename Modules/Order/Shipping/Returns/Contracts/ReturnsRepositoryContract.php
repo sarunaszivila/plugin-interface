@@ -44,7 +44,9 @@ interface ReturnsRepositoryContract
 		int $orderId, 
 		array $with = [], 
 		int $page = 1, 
-		int $itemsPerPage = 50
+		int $itemsPerPage = 50, 
+		string $sortBy = "id", 
+		string $sortOrder = "desc"
 	):PaginatedResult;
 
 	/**
@@ -54,7 +56,9 @@ interface ReturnsRepositoryContract
 		int $returnsOrderId, 
 		array $with = [], 
 		int $page = 1, 
-		int $itemsPerPage = 50
+		int $itemsPerPage = 50, 
+		string $sortBy = "id", 
+		string $sortOrder = "desc"
 	):PaginatedResult;
 
 	/**
