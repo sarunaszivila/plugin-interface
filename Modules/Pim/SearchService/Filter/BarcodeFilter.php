@@ -7,6 +7,7 @@ use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Statement\Filter\MatchFuzzyFilt
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Statement\Filter\TermFilter;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Statement\StatementInterface;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Type\Filter\BoolMustFilter;
+use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Type\Filter\BoolMustNotFilter;
 use Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Type\TypeInterface;
 
 /**
@@ -36,6 +37,18 @@ abstract class BarcodeFilter implements TypeInterface
 	 */
 	abstract public function hasId(
 		int $id
+	):self;
+
+	/**
+	 * Restricts the result to have no barcodes
+	 */
+	abstract public function hasNoBarcode(
+	):self;
+
+	/**
+	 * Restricts the result to have at least one barcode
+	 */
+	abstract public function hasBarcode(
 	):self;
 
 	abstract public function toArray(
