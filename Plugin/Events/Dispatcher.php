@@ -8,6 +8,7 @@ use Plenty\Modules\Basket\Models\BasketItem;
 use Plenty\Modules\Frontend\Events\FrontendCustomerAddressChanged;
 use Plenty\Modules\Frontend\Session\Events\AfterSessionCreate;
 use Plenty\Modules\Webshop\Events\AfterBasketItemToOrderItem;
+use Plenty\Modules\Webshop\Events\BeforeBasketItemToOrderItem;
 use Plenty\Modules\Webshop\Events\ValidateVatNumber;
 use Plenty\Plugin\PluginApiGate;
 
