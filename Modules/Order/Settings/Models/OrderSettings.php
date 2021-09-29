@@ -18,6 +18,8 @@ public		$cancelStatusFrom;
 	
 public		$cancelStatusTo;
 	
+public		$orderItemPrefixes;
+	
 	/**
 	 * Returns this model as an array.
 	 */

@@ -2,6 +2,7 @@
 namespace Plenty\Modules\Order\Shipping\Information\Contracts;
 
 use Plenty\Modules\Order\Shipping\Information\Models\ShippingInformation;
+use Plenty\Repositories\Models\PaginatedResult;
 
 /**
  * The ShippingInformationRepositoryContract is the interface for the shipping information repository. This interface allows to get shipping information by order ID, create new shipping information or update shipping information.
@@ -10,11 +11,18 @@ interface ShippingInformationRepositoryContract
 {
 
 	/**
-	 * Get Shipping Information by an order ID
+	 * Get Shipping Information by an order ID.
 	 */
 	public function getShippingInformationByOrderId(
 		int $orderId
 	):ShippingInformation;
+
+	/**
+	 * Get export label for an order ID.
+	 */
+	public function getShippingExportLabelByOrderId(
+		int $orderId
+	);
 
 	/**
 	 * Get all the orders with their shipping information
@@ -22,6 +30,13 @@ interface ShippingInformationRepositoryContract
 	public function getOrdersShippingInformation(
 		array $searchParams
 	):array;
+
+	/**
+	 * Get all the orders with their shipping information in a paginated form
+	 */
+	public function listOrdersShippingInformation(
+		array $searchParams
+	):PaginatedResult;
 
 	/**
 	 * Delete Shipping Information by an order ID

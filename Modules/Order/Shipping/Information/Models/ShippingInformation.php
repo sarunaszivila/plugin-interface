@@ -8,6 +8,8 @@ namespace Plenty\Modules\Order\Shipping\Information\Models;
 abstract class ShippingInformation 
 {
 
+	const MAX_ITEMS_PER_PAGE = 100;
+
 	const CREATED_AT = 'createdAt';
 
 	const UPDATED_AT = 'updatedAt';

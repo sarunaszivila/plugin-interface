@@ -22,6 +22,8 @@ public		$isNet;
 	
 public		$shippingCosts;
 	
+public		$calculatedWarehouseLocationId;
+	
 public		$orderinfoText;
 	
 public		$payDataComplete;
