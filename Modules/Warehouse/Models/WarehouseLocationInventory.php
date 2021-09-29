@@ -14,6 +14,8 @@ abstract class WarehouseLocationInventory
 
 	const INVENTORY_STATUS_FINISHED = 2;
 
+	const INVENTORY_STATUS_CANCELED = 3;
+
 	const CREATED_AT = 'createdAt';
 
 	const UPDATED_AT = 'updatedAt';
