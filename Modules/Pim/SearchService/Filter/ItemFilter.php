@@ -44,10 +44,24 @@ abstract class ItemFilter implements TypeInterface
 	):self;
 
 	/**
+	 * Restricts the result to have any of the specified flags.
+	 */
+	abstract public function hasAnyFlag1(
+		array $flags
+	):self;
+
+	/**
 	 * Restricts the result to have the specified flag 2.
 	 */
 	abstract public function hasFlag2(
 		int $flagId
+	):self;
+
+	/**
+	 * Restricts the result to have any of the specified flags.
+	 */
+	abstract public function hasAnyFlag2(
+		array $flags
 	):self;
 
 	/**
