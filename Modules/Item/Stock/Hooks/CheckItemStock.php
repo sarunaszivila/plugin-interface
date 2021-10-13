@@ -1,11 +1,12 @@
 <?php
 namespace Plenty\Modules\Item\Stock\Hooks;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Plenty\Modules\Basket\Contracts\BasketItemRepositoryContract;
 use Plenty\Modules\Basket\Events\BasketItem\BasketItemEvent;
 use Plenty\Modules\Basket\Exceptions\BasketItemCheckException;
 use Plenty\Modules\Basket\Models\BasketItem;
+use Plenty\Modules\Basket\Repositories\BasketItemRepository;
 use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 use Plenty\Modules\Item\DataLayer\Models\Record;
 use Plenty\Modules\Item\Stock\Contracts\BasketReservationContract;
@@ -24,6 +25,13 @@ abstract class CheckItemStock
 
 	abstract public function handle(
 		BasketItemEvent $basketItemEvent
+	);
+
+	/**
+	 * Check the quantity of the same variation in other basket items.
+	 */
+	abstract public function getQuantityForItem(
+		BasketItem $basketItem
 	);
 
 }
