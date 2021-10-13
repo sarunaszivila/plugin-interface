@@ -58,6 +58,8 @@ public		$hasDeliveryOrders;
 	
 public		$legacyOrderType;
 	
+public		$client;
+	
 public		$addresses;
 	
 public		$addressRelations;

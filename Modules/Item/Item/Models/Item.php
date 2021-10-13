@@ -120,6 +120,8 @@ public		$free20;
 	
 public		$maximumOrderQuantity;
 	
+public		$manufacturer;
+	
 public		$texts;
 	
 public		$ebayTitles;
