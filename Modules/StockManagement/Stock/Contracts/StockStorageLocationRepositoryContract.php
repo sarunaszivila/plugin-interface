@@ -14,6 +14,17 @@ interface StockStorageLocationRepositoryContract
 {
 
 	/**
+	 * List stock of all storage locations
+	 */
+	public function listStockStorageLocations(
+		 $columns = [], 
+		int $page = 1, 
+		int $itemsPerPage = 50, 
+		array $with = [], 
+		array $filters = []
+	);
+
+	/**
 	 * List stock of all storage locations of a warehouse
 	 */
 	public function listStockStorageLocationsByWarehouseId(
