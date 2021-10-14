@@ -17,6 +17,9 @@ interface OrderElasticSearchScrollRepositoryContract
 		int $size
 	);
 
+	public function clear(
+	);
+
 	public function setIndex(
 		IndexInterface $index
 	):ElasticSearchSearchRepositoryContract;
