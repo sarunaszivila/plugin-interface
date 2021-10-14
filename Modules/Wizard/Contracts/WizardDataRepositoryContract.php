@@ -32,7 +32,8 @@ interface WizardDataRepositoryContract
 	 * Get a single WizardData by its ID
 	 */
 	public function get(
-		string $wizardKey
+		string $wizardKey, 
+		string $pluginSetHash = ""
 	);
 
 	/**
