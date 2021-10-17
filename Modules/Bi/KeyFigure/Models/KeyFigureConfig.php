@@ -8,10 +8,6 @@ namespace Plenty\Modules\BI\KeyFigure\Models;
 abstract class KeyFigureConfig 
 {
 
-	const BI_READ_CONNECTION = 'bi-read';
-
-	const BI_WRITE_CONNECTION = 'bi-write';
-
 	const CREATED_AT = 'createdAt';
 
 	const UPDATED_AT = 'updatedAt';

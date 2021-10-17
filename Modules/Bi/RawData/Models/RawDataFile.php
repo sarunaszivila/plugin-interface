@@ -8,10 +8,6 @@ namespace Plenty\Modules\BI\RawData\Models;
 abstract class RawDataFile 
 {
 
-	const BI_READ_CONNECTION = 'bi-read';
-
-	const BI_WRITE_CONNECTION = 'bi-write';
-
 	const CREATED_AT = 'createdAt';
 
 	const UPDATED_AT = 'updatedAt';
