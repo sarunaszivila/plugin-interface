@@ -51,4 +51,7 @@ abstract class TemplateGroup
 		string $key
 	):CatalogTemplateFieldContract;
 
+	abstract public function toArray(
+	):array;
+
 }
