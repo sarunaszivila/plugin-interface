@@ -34,6 +34,8 @@ public		$vatId;
 	
 public		$customsTariffNumber;
 	
+public		$defaultPriceOnly;
+	
 	/**
 	 * Returns this model as an array.
 	 */
