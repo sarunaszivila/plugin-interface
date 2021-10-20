@@ -7,6 +7,8 @@ namespace Plenty\Modules\BI\KeyFigure\Models;
  */
 abstract class KeyFigureSearchRequest 
 {
+
+	const RESULT_LIMIT = 600;
 	
 public		$configId;
 	
