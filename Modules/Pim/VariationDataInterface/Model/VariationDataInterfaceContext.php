@@ -164,11 +164,15 @@ abstract class VariationDataInterfaceContext
 	abstract public function isGetAllFound(
 	):bool;
 
+	abstract public function getLimit(
+	);
+
 	/**
-	 * set whether the result should return all found entities or not
+	 * set whether the result should return all found entities without pagination or not
 	 */
 	abstract public function setGetAllFound(
-		bool $getAll
+		bool $getAll, 
+		int $limit = null
 	):self;
 
 	/**

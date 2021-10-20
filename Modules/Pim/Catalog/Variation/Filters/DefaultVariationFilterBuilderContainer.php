@@ -11,6 +11,10 @@ abstract class DefaultVariationFilterBuilderContainer extends \Plenty\Modules\Ca
 
 {
 
+	abstract public function removeFilterBuilder(
+		 $key
+	);
+
 	abstract public function addFilterBuilder(
 		CatalogFilterBuilderContract $filterBuilder
 	);

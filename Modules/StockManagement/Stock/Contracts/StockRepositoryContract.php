@@ -35,6 +35,15 @@ interface StockRepositoryContract
 	):PaginatedResult;
 
 	/**
+	 * List stock joined with storage locations
+	 */
+	public function listStockJoinStorageLocation(
+		array $columns = [], 
+		int $page = 1, 
+		int $itemsPerPage = 50
+	):PaginatedResult;
+
+	/**
 	 * List stock by warehouse type
 	 */
 	public function listStockByWarehouseType(

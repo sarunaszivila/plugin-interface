@@ -8,7 +8,7 @@ namespace Plenty\Modules\Feedback\Models;
 abstract class Feedback 
 {
 
-	const MAX_ITEMS_PER_PAGE = 100;
+	const MAX_ITEMS_PER_PAGE = 500;
 
 	const CREATED_AT = 'createdAt';
 
