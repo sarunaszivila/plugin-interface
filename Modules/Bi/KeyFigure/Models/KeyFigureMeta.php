@@ -16,6 +16,8 @@ public		$creatorRealName;
 	
 public		$isLimitEditing;
 	
+public		$numberFormatLang;
+	
 	/**
 	 * Returns this model as an array.
 	 */
