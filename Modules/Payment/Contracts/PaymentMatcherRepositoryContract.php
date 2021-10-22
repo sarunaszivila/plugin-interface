@@ -1,6 +1,7 @@
 <?php
 namespace Plenty\Modules\Payment\Contracts;
 
+use Plenty\Modules\Payment\Exceptions\PaymentMatcherException;
 use Plenty\Modules\Payment\Models\Payment;
 
 /**
@@ -8,6 +9,14 @@ use Plenty\Modules\Payment\Models\Payment;
  */
 interface PaymentMatcherRepositoryContract 
 {
+
+	/**
+	 * Checks and save the payment data
+	 */
+	public function checkMapPayment(
+		int $mopId, 
+		 $data
+	);
 
 	/**
 	 * Checks and assigns payment data.
