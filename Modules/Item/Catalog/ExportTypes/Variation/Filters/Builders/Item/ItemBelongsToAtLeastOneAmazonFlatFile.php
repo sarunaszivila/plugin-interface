@@ -38,6 +38,10 @@ template definition this should not be called. Use the specific setter methods i
 		string $flatFiles
 	):self;
 
+	abstract public function addAmazonFlatFile(
+		string $flatFile
+	):self;
+
 	abstract public function setAmazonFlatFilesRef(
 		string $flatFilesRef
 	):self;
