@@ -38,6 +38,10 @@ template definition this should not be called. Use the specific setter methods i
 		float $marketIds
 	):self;
 
+	abstract public function addMarketId(
+		float $marketId
+	):self;
+
 	abstract public function setMarketIdsRef(
 		string $marketIdsRef
 	):self;

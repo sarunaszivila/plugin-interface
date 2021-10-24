@@ -35,6 +35,10 @@ template definition this should not be called. Use the specific setter methods i
 		int $itemIds
 	):self;
 
+	abstract public function addItemId(
+		int $itemId
+	):self;
+
 	abstract public function getKey(
 	):string;
 

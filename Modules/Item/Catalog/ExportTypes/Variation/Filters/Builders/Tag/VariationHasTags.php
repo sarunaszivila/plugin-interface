@@ -7,7 +7,7 @@ use Plenty\Modules\Item\Catalog\ExportTypes\Variation\Filters\Builders\Variation
 use Plenty\Modules\Item\Search\Filter\TagFilter;
 
 /**
- * Used to represent the ItemHasIds filter in both the catalog export and UI.
+ * Used to represent the HasAllTags filter in both the catalog export and UI.
  */
 abstract class VariationHasTags implements \Plenty\Modules\Catalog\Contracts\Filters\CatalogFilterBuilderContract
 
@@ -33,6 +33,10 @@ template definition this should not be called. Use the specific setter methods i
 
 	abstract public function setTagIds(
 		int $tagIds
+	):self;
+
+	abstract public function addTagId(
+		int $tagId
 	):self;
 
 	abstract public function getKey(

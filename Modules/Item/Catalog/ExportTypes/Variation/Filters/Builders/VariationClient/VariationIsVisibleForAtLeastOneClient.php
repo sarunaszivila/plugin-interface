@@ -37,6 +37,10 @@ template definition this should not be called. Use the specific setter methods i
 		int $clients
 	):self;
 
+	abstract public function addClient(
+		int $client
+	):self;
+
 	abstract public function setClientsRef(
 		string $clientsRef
 	):self;
