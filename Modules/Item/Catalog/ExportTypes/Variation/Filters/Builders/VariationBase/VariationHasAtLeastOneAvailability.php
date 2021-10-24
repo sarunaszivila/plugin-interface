@@ -37,6 +37,10 @@ template definition this should not be called. Use the specific setter methods i
 		int $availabilities
 	):self;
 
+	abstract public function addAvailability(
+		int $availability
+	):self;
+
 	abstract public function setAvailabilitiesRef(
 		string $availabilitiesRef
 	):self;

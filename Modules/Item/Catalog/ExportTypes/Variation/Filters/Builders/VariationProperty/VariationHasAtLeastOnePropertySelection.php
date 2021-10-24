@@ -38,6 +38,10 @@ template definition this should not be called. Use the specific setter methods i
 		int $propertySelectionIds
 	):self;
 
+	abstract public function addPropertySelectionId(
+		int $propertySelectionId
+	):self;
+
 	/**
 	 * Links a key in the settings as source of the value for $propertySelectionIds.
 	 */
