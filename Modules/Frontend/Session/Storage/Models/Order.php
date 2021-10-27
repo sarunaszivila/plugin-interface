@@ -24,6 +24,8 @@ public		$shippingCosts;
 	
 public		$calculatedWarehouseLocationId;
 	
+public		$isClearVatCase;
+	
 public		$orderinfoText;
 	
 public		$payDataComplete;
