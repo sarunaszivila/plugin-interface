@@ -14,6 +14,8 @@ abstract class CatalogStatus
 
 	const STATE_STARTING = 'starting';
 
+	const STATE_QUEUEING = 'queueing';
+
 	const STATE_PROCESSING = 'processing';
 
 	const STATE_COMPLETE = 'complete';
