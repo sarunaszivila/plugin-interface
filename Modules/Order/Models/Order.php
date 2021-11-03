@@ -124,6 +124,8 @@ public		$warehouseReceiver;
 	
 public		$transactionSums;
 	
+public		$orderItemSummary;
+	
 public		$paymentTerms;
 	
 public		$shippingInformation;

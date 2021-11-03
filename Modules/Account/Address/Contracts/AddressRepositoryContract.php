@@ -20,7 +20,8 @@ interface AddressRepositoryContract
 	 * Gets an address. The ID of the address must be specified.
 	 */
 	public function findAddressById(
-		int $addressId
+		int $addressId, 
+		array $with = []
 	):Address;
 
 	/**
