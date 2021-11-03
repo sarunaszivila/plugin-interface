@@ -54,6 +54,8 @@ abstract class CouponCampaign
 
 	const CODE_ASSIGNMENT_USE_EXISTING = 'use_existing';
 
+	const CODE_ASSIGNMENT_ONLY_USE_EXISTING = 'only_use_existing';
+
 	const CAMPAIGN_VALID_FOR_ALL_CUSTOMERS = 'all_customers';
 
 	const CAMPAIGN_VALID_FOR_NEW_CUSTOMERS = 'new_customers';
