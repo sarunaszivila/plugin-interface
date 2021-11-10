@@ -30,6 +30,8 @@ public		$createdAt;
 	
 public		$updatedAt;
 	
+public		$deletedAt;
+	
 	/**
 	 * Returns this model as an array.
 	 */
