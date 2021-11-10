@@ -28,7 +28,8 @@ interface ContentCacheInvalidationRepositoryContract
 	 * Invalidate all cache entries related to given plenty ID.
 	 */
 	public function invalidateAll(
-		int $plentyId = null
+		int $plentyId = null, 
+		bool $bypassActiveCheck = false
 	);
 
 	/**
