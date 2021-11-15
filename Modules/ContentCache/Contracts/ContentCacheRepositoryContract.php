@@ -16,6 +16,13 @@ interface ContentCacheRepositoryContract
 	);
 
 	/**
+	 * Disable caching for current response because of any unwanted behavior.
+	 */
+	public function disableCacheForResponse(
+		string $reason = ""
+	);
+
+	/**
 	 * Link variations to current response.
 	 */
 	public function linkVariationsToResponse(
