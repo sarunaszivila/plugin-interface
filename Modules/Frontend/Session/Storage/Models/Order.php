@@ -26,6 +26,8 @@ public		$calculatedWarehouseLocationId;
 	
 public		$isClearVatCase;
 	
+public		$orderAmountVats;
+	
 public		$orderinfoText;
 	
 public		$payDataComplete;
