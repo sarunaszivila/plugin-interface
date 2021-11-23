@@ -186,6 +186,8 @@ abstract class OrderPropertyType
 
 	const IS_REVERSE_CHARGED = 90;
 
+	const DISALLOW_INTERNAL_TAX_RELEVANT_DOCUMENTS = 91;
+
 	const TRADE_REPRESENTATIVE = 992;
 
 	const EBAY_CANCELLATION = 993;
