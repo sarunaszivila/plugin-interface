@@ -62,4 +62,11 @@ interface AdvanceOrderRepositoryContract
 		array $data
 	):Order;
 
+	/**
+	 * Convert sales order into advance order
+	 */
+	public function convertFromSalesOrder(
+		int $orderId
+	):Order;
+
 }

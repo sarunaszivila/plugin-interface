@@ -60,6 +60,11 @@ abstract class Base
 	public		$availability;
 	
 	/**
+	 * @var int
+	 */
+	public		$availabilityId;
+	
+	/**
 	 * @var string
 	 */
 	public		$estimatedAvailableAt;
