@@ -164,7 +164,8 @@ interface OrderRepositoryContract
 	 */
 	public function getLatestOrderByContactId(
 		int $contactId, 
-		array $with = []
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
