@@ -29,11 +29,14 @@ abstract class PriceFilter implements TypeInterface
 		int $clientId = null
 	);
 
-	abstract public function getType(
-	):string;
-
+	/**
+	 * DIRTY CHEAT FOR OLD IO TESTS
+	 */
 	abstract public function toArray(
 	):array;
+
+	abstract public function getType(
+	):string;
 
 	abstract public function addStatement(
 		StatementInterface $statement
