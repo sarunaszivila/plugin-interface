@@ -2,6 +2,7 @@
 namespace Plenty\Modules\Pim\VariationDataInterface\Model;
 
 use Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Base;
+use Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Inheritance;
 use Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Timestamp;
 use Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Unit;
 
@@ -115,6 +116,11 @@ abstract class Variation
 	 * @var array
 	 */
 	public		$properties;
+	
+	/**
+	 * @var Inheritance
+	 */
+	public		$inheritance;
 	
 	/**
 	 * @var array

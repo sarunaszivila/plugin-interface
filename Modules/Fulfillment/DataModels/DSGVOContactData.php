@@ -12,6 +12,8 @@ public		$phone;
 	
 public		$email;
 	
+public		$isAlternativeEmail;
+	
 	/**
 	 * Returns this model as an array.
 	 */
