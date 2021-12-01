@@ -13,7 +13,9 @@ interface CreditNoteRepositoryContract
 	 * Create a credit note
 	 */
 	public function create(
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -21,7 +23,9 @@ interface CreditNoteRepositoryContract
 	 */
 	public function update(
 		int $orderId, 
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**

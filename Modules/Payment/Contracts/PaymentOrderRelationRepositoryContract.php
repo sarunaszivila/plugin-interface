@@ -40,7 +40,8 @@ interface PaymentOrderRelationRepositoryContract
 	 */
 	public function createOrderRelationWithValidation(
 		int $paymentId, 
-		int $orderId
+		int $orderId, 
+		int $matchingRate = null
 	):PaymentOrderRelation;
 
 	/**

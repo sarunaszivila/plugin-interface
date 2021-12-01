@@ -13,7 +13,9 @@ interface RepairRepositoryContract
 	 * Create a repair
 	 */
 	public function create(
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -21,7 +23,9 @@ interface RepairRepositoryContract
 	 */
 	public function update(
 		int $orderId, 
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
