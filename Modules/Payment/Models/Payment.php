@@ -116,6 +116,8 @@ public		$method;
 	
 public		$order;
 	
+public		$contact;
+	
 public		$histories;
 	
 public		$properties;

@@ -13,7 +13,9 @@ interface AdvanceOrderRepositoryContract
 	 * Create an advance order
 	 */
 	public function create(
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -21,7 +23,9 @@ interface AdvanceOrderRepositoryContract
 	 */
 	public function createWithCoupons(
 		array $data, 
-		array $coupons = []
+		array $coupons = [], 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -29,7 +33,9 @@ interface AdvanceOrderRepositoryContract
 	 */
 	public function update(
 		int $orderId, 
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**

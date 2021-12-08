@@ -14,7 +14,9 @@ interface DeliveryOrderRepositoryContract
 	 * Create a delivery order
 	 */
 	public function create(
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -22,7 +24,9 @@ interface DeliveryOrderRepositoryContract
 	 */
 	public function update(
 		int $orderId, 
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
