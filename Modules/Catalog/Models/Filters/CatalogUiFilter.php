@@ -31,6 +31,9 @@ abstract class CatalogUiFilter
 	abstract public function getValues(
 	):array;
 
+	abstract public function getCustomData(
+	);
+
 	abstract public function getNestedUiFilterContainer(
 	):CatalogUiFilterContainer;
 

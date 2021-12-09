@@ -34,6 +34,8 @@ public		$isFilterable;
 	
 public		$origin;
 	
+public		$showInLeads;
+	
 	/**
 	 * Returns this model as an array.
 	 */
