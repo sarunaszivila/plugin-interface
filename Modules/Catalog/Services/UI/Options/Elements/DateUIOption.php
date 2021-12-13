@@ -9,7 +9,8 @@ use Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption;
 /**
  * UI Option of type: date
  */
-abstract class DateUIOption 
+abstract class DateUIOption implements UIOptionContract
+
 {
 
 	const TYPE_CHECKBOX = 'checkbox';

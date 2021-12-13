@@ -9,7 +9,8 @@ use Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption;
 /**
  * UI Option of type: toggle
  */
-abstract class ToggleUIOption 
+abstract class ToggleUIOption implements UIOptionContract
+
 {
 
 	const TYPE_CHECKBOX = 'checkbox';

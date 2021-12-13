@@ -4,6 +4,7 @@ namespace Plenty\Modules\Catalog\Contracts;
 use Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer;
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
 use Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer;
+use Plenty\Modules\Catalog\Services\UI\Sections\Sections;
 
 /**
  * The CatalogGroupedTemplateProviderContract is the interface that has to be implemented by the catalogue template providers. Each registered template should have a catalogue template provider (multiple templates can use the same one) to avoid booting them if they are not necessary. A catalogue template provider fills a template with data at the moment the template gets booted.Use the abstract class Plenty\Modules\Catalog\Templates\Providers\AbstractGroupedTemplateProvider.
@@ -100,5 +101,11 @@ interface CatalogGroupedTemplateProviderContract
 	 */
 	public function getDefaultCatalogSettings(
 	):array;
+
+	/**
+	 * Returns Sections with options that will be displayed in the UI of each catalogue with a template that uses this provider. The selected values for all those settings can then be used in the export.
+	 */
+	public function getSections(
+	):Sections;
 
 }

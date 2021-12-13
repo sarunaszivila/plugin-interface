@@ -6,7 +6,8 @@ use Plenty\Modules\Catalog\Contracts\UI\UIValueContract;
 /**
  * Base UI Option value
  */
-abstract class Value 
+abstract class Value implements UIValueContract
+
 {
 
 	abstract public function toArray(

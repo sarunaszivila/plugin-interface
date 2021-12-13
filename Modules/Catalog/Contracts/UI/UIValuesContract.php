@@ -14,7 +14,7 @@ interface UIValuesContract
 	 */
 	public function add(
 		UIValueContract $value
-	):UIOptionsContract;
+	):UIValuesContract;
 
 	/**
 	 * Get the instance as an array.

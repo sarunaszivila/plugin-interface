@@ -11,10 +11,18 @@ use Plenty\Modules\Catalog\Services\UI\Options\UIOptions;
 abstract class Assignments 
 {
 
+	/**
+	 * Add an option
+	 */
 	abstract public function add(
-	);
+		UIOptionContract $option, 
+		string $key = null
+	):UIOptionsContract;
 
+	/**
+	 * Get the instance as an array.
+	 */
 	abstract public function toArray(
-	);
+	):array;
 
 }

@@ -1,6 +1,7 @@
 <?php
 namespace Plenty\Modules\Catalog\Services\UI\Options\Elements\Values;
 
+use Plenty\Exceptions\ValidationException;
 use Plenty\Modules\Catalog\Contracts\UI\UIValueContract;
 use Plenty\Modules\Catalog\Contracts\UI\UIValuesContract;
 use Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Validators\ValueValidator;
@@ -8,12 +9,16 @@ use Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Validators\ValueV
 /**
  * UI Option values container
  */
-abstract class Values 
+abstract class Values implements UIValuesContract
+
 {
 
+	/**
+	 * Add a value
+	 */
 	abstract public function add(
-		 $value
-	);
+		UIValueContract $value
+	):UIValuesContract;
 
 	abstract public function toArray(
 	);

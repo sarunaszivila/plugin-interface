@@ -9,7 +9,8 @@ use Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption;
 /**
  * UI Option of type: number
  */
-abstract class NumberUIOption 
+abstract class NumberUIOption implements UIOptionContract
+
 {
 
 	const TYPE_CHECKBOX = 'checkbox';
