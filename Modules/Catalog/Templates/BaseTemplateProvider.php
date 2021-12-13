@@ -4,6 +4,7 @@ namespace Plenty\Modules\Catalog\Templates;
 use Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigProviderContract;
 use Plenty\Modules\Catalog\Contracts\CatalogTemplateProviderContract;
 use Plenty\Modules\Catalog\Contracts\TemplateContract;
+use Plenty\Modules\Catalog\Services\UI\Sections\Sections;
 
 /**
  * The BaseTemplateProvider is the abstract class that should be used to implement a template provider.
@@ -38,5 +39,8 @@ abstract class BaseTemplateProvider implements CatalogTemplateProviderContract
 
 	abstract public function getAssignments(
 	):array;
+
+	abstract public function getSections(
+	):Sections;
 
 }

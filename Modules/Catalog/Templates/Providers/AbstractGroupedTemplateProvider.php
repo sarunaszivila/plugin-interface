@@ -11,6 +11,7 @@ use Plenty\Modules\Catalog\Dummy\DynamicConfig\EmptyCatalogDynamicConfig;
 use Plenty\Modules\Catalog\Dummy\EmptyCatalogMutator;
 use Plenty\Modules\Catalog\Services\Converter\Containers\DefaultResultConverterContainer;
 use Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer;
+use Plenty\Modules\Catalog\Services\UI\Sections\Sections;
 
 /**
  * The AbstractGroupedTemplateProvider is the abstract class that should be used to implement a template provider.
@@ -81,6 +82,9 @@ abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplate
 
 	abstract public function getDefaultCatalogSettings(
 	):array;
+
+	abstract public function getSections(
+	):Sections;
 
 	/**
 	 * Returns a container in which all TemplateGroups of this template are collected.

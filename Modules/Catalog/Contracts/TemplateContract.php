@@ -5,6 +5,7 @@ use Illuminate\Contracts\Support\Arrayable;
 use Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer;
 use Plenty\Modules\Catalog\Containers\TemplateGroupContainer;
 use Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer;
+use Plenty\Modules\Catalog\Services\UI\Sections\Sections;
 
 /**
  * The TemplateContract is the interface for templates. Templates are used to define a specific schema that can be used to create and configure a catalogue.
@@ -160,6 +161,12 @@ on the order of adding the groups to the template.
 	 */
 	public function getSettings(
 	):array;
+
+	/**
+	 * Returns the sections of a template
+	 */
+	public function getSections(
+	):Sections;
 
 	/**
 	 * Sets the meta info for a template. Meta info is used to provide data which has to be known when working with the template. If possible, don't use this directly and let it be handled by the catalogue template provider.

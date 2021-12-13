@@ -7,7 +7,8 @@ use Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base\Val
 /**
  * UI Option value of type: select
  */
-abstract class SelectValue 
+abstract class SelectValue implements UIValueContract
+
 {
 
 	abstract public function toArray(

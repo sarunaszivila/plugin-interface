@@ -28,6 +28,8 @@ public		$isClearVatCase;
 	
 public		$orderAmountVats;
 	
+public		$promotionalCouponItems;
+	
 public		$orderinfoText;
 	
 public		$payDataComplete;
