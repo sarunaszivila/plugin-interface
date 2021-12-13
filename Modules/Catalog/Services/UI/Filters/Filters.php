@@ -2,6 +2,7 @@
 namespace Plenty\Modules\Catalog\Services\UI\Filters;
 
 use Illuminate\Support\Arr;
+use Plenty\Exceptions\ValidationException;
 use Plenty\Modules\Catalog\Contracts\Filters\CatalogFilterBuilderContract;
 use Plenty\Modules\Catalog\Contracts\UI\UIOptionContract;
 use Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract;
@@ -43,10 +44,18 @@ abstract class Filters
 		string $key
 	):DateFilter;
 
+	/**
+	 * Add an option
+	 */
 	abstract public function add(
-	);
+		UIOptionContract $option, 
+		string $key = null
+	):UIOptionsContract;
 
+	/**
+	 * Get the instance as an array.
+	 */
 	abstract public function toArray(
-	);
+	):array;
 
 }
