@@ -66,7 +66,9 @@ interface OrderRepositoryContract
 	 */
 	public function createOrder(
 		array $data, 
-		string $coupon = null
+		string $coupon = null, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -74,7 +76,9 @@ interface OrderRepositoryContract
 	 */
 	public function create(
 		array $data, 
-		array $coupons = []
+		array $coupons = [], 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -82,7 +86,9 @@ interface OrderRepositoryContract
 	 */
 	public function updateOrder(
 		array $data, 
-		int $orderId
+		int $orderId, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -90,7 +96,9 @@ interface OrderRepositoryContract
 	 */
 	public function update(
 		int $orderId, 
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**

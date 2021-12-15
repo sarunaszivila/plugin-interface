@@ -14,6 +14,8 @@ interface SalesOrderRepositoryContract
 	 * Create a sales order
 	 */
 	public function create(
+		array $with = [], 
+		bool $lazyLoaded = false, 
 		array $data
 	):Order;
 
@@ -22,7 +24,9 @@ interface SalesOrderRepositoryContract
 	 */
 	public function createWithCoupons(
 		array $data, 
-		array $coupons = []
+		array $coupons = [], 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
@@ -30,7 +34,9 @@ interface SalesOrderRepositoryContract
 	 */
 	public function update(
 		int $orderId, 
-		array $data
+		array $data, 
+		array $with = [], 
+		bool $lazyLoaded = false
 	):Order;
 
 	/**
