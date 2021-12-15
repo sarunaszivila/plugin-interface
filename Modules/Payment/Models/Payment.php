@@ -74,9 +74,9 @@ abstract class Payment
 
 	const ACCEPTED_PAYMENT_METHODS_FOR_SPLIT = [5000,5001,5002,5003];
 
-	const CREATED_AT = 'createdAt';
+	const CREATED_AT = 'importedAt';
 
-	const UPDATED_AT = 'updatedAt';
+	const UPDATED_AT = '';
 	
 public		$id;
 	

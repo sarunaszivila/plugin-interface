@@ -28,7 +28,8 @@ interface DocumentRepositoryContract
 	 */
 	public function findById(
 		int $id, 
-		array $columns = []
+		array $columns = [], 
+		array $with = []
 	):Document;
 
 	/**
