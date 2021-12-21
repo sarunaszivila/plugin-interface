@@ -40,6 +40,9 @@ abstract class BaseTemplateProvider implements CatalogTemplateProviderContract
 	abstract public function getAssignments(
 	):array;
 
+	abstract public function getHooks(
+	);
+
 	abstract public function getSections(
 	):Sections;
 
