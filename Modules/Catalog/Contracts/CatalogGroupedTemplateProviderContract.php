@@ -103,6 +103,12 @@ interface CatalogGroupedTemplateProviderContract
 	):array;
 
 	/**
+	 * Register hooks in specific event slots
+	 */
+	public function getHooks(
+	);
+
+	/**
 	 * Returns Sections with options that will be displayed in the UI of each catalogue with a template that uses this provider. The selected values for all those settings can then be used in the export.
 	 */
 	public function getSections(

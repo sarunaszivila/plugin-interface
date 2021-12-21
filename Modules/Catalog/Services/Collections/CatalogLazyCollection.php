@@ -6,6 +6,7 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Plenty\Modules\Catalog\Models\CatalogExportResult;
+use Plenty\Modules\Catalog\Services\Events\Events\Events;
 
 /**
  * LazyCollection wrapper with limited access. Only specific methods are allowed.
