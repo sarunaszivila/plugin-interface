@@ -83,6 +83,15 @@ abstract class AbstractGroupedTemplateProvider implements CatalogGroupedTemplate
 	abstract public function getDefaultCatalogSettings(
 	):array;
 
+	/**
+	 * Register hooks in specific event slots
+	 */
+	abstract public function getHooks(
+	);
+
+	/**
+	 * Gets sections
+	 */
 	abstract public function getSections(
 	):Sections;
 
